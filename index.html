@@ -244,6 +244,26 @@ main{ max-width:1080px; margin:0 auto; padding: clamp(2rem,5vw,4rem) clamp(1.25r
 .sf-panel p{ margin:0; line-height:1.6; color:var(--ink-soft); font-size:.96rem; }
 .sf-panel strong{ color:var(--ink); font-weight:600; }
 
+/* ============ ARTICLE ============ */
+.article{ max-width:68ch; }
+.article p{
+  color:var(--ink-soft); line-height:1.8; font-size:1.02rem;
+  margin:0 0 1.15rem;
+}
+.article p.lede{
+  color:var(--ink); font-size:1.12rem; line-height:1.75;
+  border-left:2px solid var(--gold-2); padding-left:1.1rem; margin-bottom:1.8rem;
+}
+.article h2{
+  font-size:1.35rem; margin:2.4rem 0 .9rem; color:var(--ink);
+}
+.article ul{ margin:0 0 1.15rem; padding-left:1.1rem; }
+.article li{ color:var(--ink-soft); line-height:1.7; margin-bottom:.5rem; }
+.article li strong{ color:var(--ink); font-weight:600; }
+.article .rule{
+  border:0; border-top:1px solid var(--line); margin:2.2rem 0;
+}
+
 .back-link{
   display:inline-flex; align-items:center; gap:.4rem;
   margin-top:2.4rem; font-size:.9rem; color:var(--gold-2);
@@ -278,6 +298,7 @@ const FORUMS = [
       ["Introduction to the religion",""],
       ["Aqeedah","The core articles of Islamic creed and belief.",[
         ["Introduction to Aqeedah",""],
+        ["The Fundamental Sources of Evidence",""],
         ["Tawhid",""],
         ["Kufr and Shirk",""],
         ["Sunni Athari Creed",""],
@@ -293,12 +314,12 @@ const FORUMS = [
         ["Al Wala wal Bara",""],
         ["Kufr bi Taghut wa Iman Billah",""],
         ["Meaning of Life",""],
-        ["The Akhirah",""]
-      ]],
-      ["Ethics and Morality","",[
-        ["Defining good and evil",""],
-        ["Halal and its subsets",""],
-        ["Haram and its subsets",""]
+        ["The Akhirah",""],
+        ["Ethics and Morality","",[
+          ["Defining good and evil",""],
+          ["Halal and its subsets",""],
+          ["Haram and its subsets",""]
+        ]]
       ]],
       ["Usool al Fiqh and Sources of Evidence",""],
       ["How to Revert to Islam",""],
@@ -396,6 +417,107 @@ const FORUMS = [
     ]
   }
 ];
+
+/* ============ PAGE CONTENT ============ */
+/* keyed by "forumId/sub-slug" (or deeper paths, joined with "/") */
+const CONTENT = {
+"what-is-islam/introduction-to-the-religion": `
+<p class="lede">Islam is an Abrahamic monotheistic religion, with nearly two billion followers worldwide.</p>
+
+<p>To understand Islam from the ground up, it is best to look at its foundational meaning: the word Islam is an Arabic term that means &ldquo;submission&rdquo; (specifically, submission to the will of Allah) and shares a linguistic root with the word <em>salam</em>, meaning &ldquo;peace.&rdquo; A follower of Islam is called a Muslim, meaning &ldquo;one who submits.&rdquo;</p>
+
+<p>Islam teaches that there is only one divine being, the creator of the heavens and the earth, his name is Allah.</p>
+
+<p>It is a religion that can be practiced by any human. The central concept of this way of life is total submission to God. Islam is a complete, holistic way of living that covers every aspect of life. Islam leaves no stone unturned as it teaches mankind how to behave in every area of life: individual, social, material, moral, ethical, legal, cultural, political, economical, and global.</p>
+
+<h2>The Oneness of Allah</h2>
+
+<p>Muslims believe Allah has no partners in divinity, which includes having no son, and nothing in the universe is similar to Him. Muslims believe that Allah is the Originator and Sustainer of the universe and that he created human beings to worship Him alone.</p>
+
+<p>To worship anything besides Allah is considered blasphemy. The reward for worshiping Him alone and following his path is goodness in this world and Paradise in the next.</p>
+
+<p>A core belief taught in Islam is that human beings are unique from among God&rsquo;s creation. We have the ability to think freely and choose to behave in any way we wish. In order to communicate and guide mankind, Allah sends Prophets and Messengers with scriptures to teach mankind about the true message.</p>
+
+<h2>Revelation and the Prophets</h2>
+
+<p>Muslims believe that many scriptures have been revealed to mankind in the past. They include the Torah sent to Moses, the Psalms sent to David, and the Gospel sent to Jesus (peace be upon them all).</p>
+
+<p>The Holy Qur&rsquo;an is the last revelation from Allah sent to all of mankind and it was revealed to his final messenger, Prophet Muhammad (peace be upon him).</p>
+
+<p>Muslims believe that Islam is not a new religion, it is the same message revealed to the Prophets of the past. Their shared message was the Oneness of Allah, Monotheism, also called Tawhid in Arabic. They all were sent to spread the message that only Allah is worthy of worship, only he is owner of creation and that only he has divine attributes.</p>
+
+<p>From the beginning of mankind until the present day Allah has sent a Prophet to every nation to guide them to the truth. They were sent to teach their people to worship God alone and not to ascribe any divine partners to Him.</p>
+
+<p>The names of these Prophets may sound familiar to you. They include Adam, Nuh (Noah), Ibrahim (Abraham), Ismail, Ishaq (Isaac), Yaqub (Jacob), Jesus, Muhammad, and many others (peace be upon them all).</p>
+
+<p>Muslims believe Jesus to be a Prophet of God rather than a divine being or son, unlike Christians.</p>
+
+<h2>The Final Messenger</h2>
+
+<p>This chain of prophethood began with Adam and ended with Muhammad (peace be upon him), the final Prophet of Allah.</p>
+
+<p>He was born in Makkah in the year 570, about six centuries after Jesus. He grew up to be known as an honest and truthful person throughout the city. When he reached the age of 40 he was chosen to be a Prophet of Allah.</p>
+
+<p>He was chosen at a time when mankind had turned away from the original message of Islam that the previous Prophets had come with. Muslims believe the Gospel, Torah, and other scriptures were distorted by people after their Prophets had passed away.</p>
+
+<p>Allah sent the archangel Gabriel to reveal the Qur&rsquo;an to Muhammad (peace be upon him) to spread the correct, unadulterated teachings of Islam to the corners of the globe.</p>
+
+<p>In the Qur&rsquo;aan, Muslims are ordered to follow the teachings of Allah and his Messenger &#xFDFA;. Therefore, whatever the Prophet &#xFDFA; told us we accept, because Allah himself told us to do so. That is why every Muslim follows the Qur&rsquo;aan and the Hadiths (Reports) from the Prophet &#xFDFA;, which contain his Sunnah (his actions, words, etc) which we follow as revelation, because the Qur&rsquo;aan says the Prophet &#xFDFA; does not speak from desires, he only orders in religion what was revealed to him.</p>
+
+<hr class="rule">
+
+<h2>Where to begin</h2>
+
+<p>It is essential in Islam to learn at least the basics of:</p>
+
+<ul>
+  <li><strong>Aqeedah</strong> &mdash; the core beliefs every Muslim must have.</li>
+  <li><strong>Usul al Fiqh and Fiqh</strong> &mdash; the methodology of jurisprudence and jurisprudence itself, which go over what Muslims should do, the evidence behind the laws of Allah and their application.</li>
+</ul>
+
+<p>But it is also good to learn:</p>
+
+<ul>
+  <li>Islamic History</li>
+  <li>Arabic</li>
+  <li>Why Islam is true</li>
+  <li>Refutations</li>
+</ul>
+`,
+"what-is-islam/aqeedah/introduction-to-aqeedah": `
+<p class="lede">The word Aqeedah comes from the Arabic root <em>&lsquo;aqada</em>, which literally means &ldquo;to tie a knot.&rdquo; In Islamic terminology, it refers to a firm, unshakeable belief in the heart that is free from any doubt &mdash; the creed or theology of Islam.</p>
+
+<p>If Fiqh (jurisprudence) deals with the outward actions of a Muslim (like how to pray or fast), Aqeedah deals with the inner beliefs. It is the foundation upon which all Islamic practice is built; without a sound Aqeedah, actions are considered void.</p>
+
+<p>Aqeedah covers what we call Asl ad-deen (foundations of the religion) &mdash; without accepting and knowing these foundations you cannot be Muslim. But it also broadly covers non-foundational beliefs, depending on the colloquial usage of the word Aqeedah.</p>
+
+<p>In Aqeedah, there are things that are absolutely essential to being a Muslim; rejecting these is considered heresy, and you are considered a kaafir (disbeliever/non-Muslim).</p>
+
+<p>Because in Islam, Faith (Iman in Arabic) is not purely within the belief of the religion being true. It is also in your actions and what you believe. Your faith even increases with good deeds and decreases with bad deeds. It also relates to why reverting to Islam requires one to pronounce the Shahada (Declaration of Faith), which we cover in the forum on how to revert to Islam.</p>
+
+<p>In Islam, certain deeds/beliefs may affect your faith, and others may completely remove you from the fold of Islam.</p>
+
+<h2>Aqeedah covers</h2>
+
+<ul>
+  <li>Knowing and believing in Tawhid (Monotheism) in its true form.</li>
+  <li>Knowing the meaning of Kufr and Shirk.</li>
+  <li>Avoiding the Nawaqidul Islam (the Nullifiers of Islam), which are things that are considered Kufr or Shirk, thereby making you leave Islam by doing or believing such things.</li>
+  <li>Knowing what Bidah is and avoiding it.</li>
+  <li>Being of the Sunni Athari creed.</li>
+  <li>Being of the Salafi manhaj.</li>
+  <li>Knowing and believing in all Pillars of Islam, Iman, and Ihsan.</li>
+  <li>Knowing and acting upon Takfir.</li>
+  <li>Knowing how to apply Udhr bil Jahil.</li>
+  <li>Avoiding heresies and warning against them.</li>
+  <li>Knowing and believing in Al Wala wal Bara.</li>
+  <li>Knowing and believing in Kufr bi Taghut wa Iman Billah.</li>
+  <li>The meaning of life.</li>
+  <li>Knowing about the afterlife (Akhirah).</li>
+  <li>Knowing ethics and morality.</li>
+</ul>
+`
+};
 
 /* ============ ICONS (geometric / object line-art only — no living beings) ============ */
 const STAR_PATH = "M150,20 L170.67,100.11 L241.92,58.08 L199.89,129.33 L280,150 L199.89,170.67 L241.92,241.92 L170.67,199.89 L150,280 L129.33,199.89 L58.08,241.92 L100.11,170.67 L20,150 L100.11,129.33 L58.08,58.08 L129.33,100.11 Z";
@@ -513,6 +635,24 @@ function placeholderPage(crumbs, eyebrow, title, desc, backHref, backLabel){
   </div>`;
 }
 
+function articlePage(crumbs, eyebrow, title, desc, html, backHref, backLabel){
+  return `
+  <div class="view">
+    ${topbar(crumbs)}
+    <main>
+      <p class="sf-eyebrow">${eyebrow}</p>
+      <h1 class="sf-title">${title}</h1>
+      ${desc ? `<p class="sf-desc">${desc}</p>` : ""}
+      <div class="article">${html}</div>
+      <a class="back-link" href="${backHref}">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12H6M11 6l-6 6 6 6"/></svg>
+        Back to ${backLabel}
+      </a>
+    </main>
+    <footer>Ilm — for study and reflection.</footer>
+  </div>`;
+}
+
 function renderForum(id){
   const f = forumById(id);
   if(!f){ location.hash = "#/index"; return; }
@@ -552,9 +692,17 @@ function renderSub(fid, slug){
     return;
   }
 
+  const body = CONTENT[`${f.id}/${slug}`];
+  const crumbs = [{label:"Index",href:"#/index"},{label:f.title,href:`#/forum/${f.id}`},{label:title}];
+  const eyebrow = f.title + (f.numbered ? " · " + String(idx+1).padStart(2,"0") : "");
+
+  if(body){
+    app.innerHTML = articlePage(crumbs, eyebrow, title, desc, body, `#/forum/${f.id}`, f.title);
+    return;
+  }
+
   app.innerHTML = placeholderPage(
-    [{label:"Index",href:"#/index"},{label:f.title,href:`#/forum/${f.id}`},{label:title}],
-    f.title + (f.numbered ? " · " + String(idx+1).padStart(2,"0") : ""),
+    crumbs, eyebrow,
     title, desc,
     `#/forum/${f.id}`, f.title
   );
@@ -569,13 +717,65 @@ function renderLeaf(fid, slug, childSlug){
   if(!children){ location.hash = `#/forum/${fid}/${slug}`; return; }
   const cidx = children.findIndex(([ct]) => slugify(ct) === childSlug);
   if(cidx === -1){ location.hash = `#/forum/${fid}/${slug}`; return; }
-  const [ctitle, cdesc] = children[cidx];
+  const [ctitle, cdesc, grandchildren] = children[cidx];
+
+  if(grandchildren && grandchildren.length){
+    const items = tocList(grandchildren, gt => `#/forum/${f.id}/${slug}/${childSlug}/${slugify(gt)}`, false);
+    app.innerHTML = `
+    <div class="view">
+      ${topbar([{label:"Index",href:"#/index"},{label:f.title,href:`#/forum/${f.id}`},{label:title,href:`#/forum/${f.id}/${slug}`},{label:ctitle}])}
+      <main>
+        <div class="forum-head"><h1>${ctitle}</h1></div>
+        <p class="forum-sub">${cdesc || ""}</p>
+        <div class="toc">${items}</div>
+      </main>
+      <footer>Ilm — for study and reflection.</footer>
+    </div>`;
+    return;
+  }
+
+  const cbody = CONTENT[`${f.id}/${slug}/${childSlug}`];
+  const ccrumbs = [{label:"Index",href:"#/index"},{label:f.title,href:`#/forum/${f.id}`},{label:title,href:`#/forum/${f.id}/${slug}`},{label:ctitle}];
+  if(cbody){
+    app.innerHTML = articlePage(ccrumbs, f.title + " · " + title, ctitle, cdesc, cbody, `#/forum/${f.id}/${slug}`, title);
+    return;
+  }
 
   app.innerHTML = placeholderPage(
-    [{label:"Index",href:"#/index"},{label:f.title,href:`#/forum/${f.id}`},{label:title,href:`#/forum/${f.id}/${slug}`},{label:ctitle}],
+    ccrumbs,
     f.title + " · " + title,
     ctitle, cdesc,
     `#/forum/${f.id}/${slug}`, title
+  );
+}
+
+function renderDeep(fid, slug, childSlug, grandSlug){
+  const f = forumById(fid);
+  if(!f){ location.hash = "#/index"; return; }
+  const idx = f.subs.findIndex(([title]) => slugify(title) === slug);
+  if(idx === -1){ location.hash = `#/forum/${fid}`; return; }
+  const [title,, children] = f.subs[idx];
+  if(!children){ location.hash = `#/forum/${fid}/${slug}`; return; }
+  const cidx = children.findIndex(([ct]) => slugify(ct) === childSlug);
+  if(cidx === -1){ location.hash = `#/forum/${fid}/${slug}`; return; }
+  const [ctitle,, grandchildren] = children[cidx];
+  if(!grandchildren){ location.hash = `#/forum/${fid}/${slug}/${childSlug}`; return; }
+  const gidx = grandchildren.findIndex(([gt]) => slugify(gt) === grandSlug);
+  if(gidx === -1){ location.hash = `#/forum/${fid}/${slug}/${childSlug}`; return; }
+  const [gtitle, gdesc] = grandchildren[gidx];
+
+  const gbody = CONTENT[`${f.id}/${slug}/${childSlug}/${grandSlug}`];
+  const gcrumbs = [{label:"Index",href:"#/index"},{label:f.title,href:`#/forum/${f.id}`},{label:title,href:`#/forum/${f.id}/${slug}`},{label:ctitle,href:`#/forum/${f.id}/${slug}/${childSlug}`},{label:gtitle}];
+  if(gbody){
+    app.innerHTML = articlePage(gcrumbs, f.title + " · " + title + " · " + ctitle, gtitle, gdesc, gbody, `#/forum/${f.id}/${slug}/${childSlug}`, ctitle);
+    return;
+  }
+
+  app.innerHTML = placeholderPage(
+    gcrumbs,
+    f.title + " · " + title + " · " + ctitle,
+    gtitle, gdesc,
+    `#/forum/${f.id}/${slug}/${childSlug}`, ctitle
   );
 }
 
@@ -589,7 +789,8 @@ function route(){
   if(parts[0] === "index"){ renderIndex(); return; }
   if(parts[0] === "forum" && parts[1] && !parts[2]){ renderForum(parts[1]); return; }
   if(parts[0] === "forum" && parts[1] && parts[2] && !parts[3]){ renderSub(parts[1], parts[2]); return; }
-  if(parts[0] === "forum" && parts[1] && parts[2] && parts[3]){ renderLeaf(parts[1], parts[2], parts[3]); return; }
+  if(parts[0] === "forum" && parts[1] && parts[2] && parts[3] && !parts[4]){ renderLeaf(parts[1], parts[2], parts[3]); return; }
+  if(parts[0] === "forum" && parts[1] && parts[2] && parts[3] && parts[4]){ renderDeep(parts[1], parts[2], parts[3], parts[4]); return; }
   renderIntro();
 }
 window.addEventListener("hashchange", route);
