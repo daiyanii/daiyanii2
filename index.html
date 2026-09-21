@@ -258,6 +258,7 @@ main{ max-width:1080px; margin:0 auto; padding: clamp(2rem,5vw,4rem) clamp(1.25r
   font-size:1.35rem; margin:2.4rem 0 .9rem; color:var(--ink);
 }
 .article ul{ margin:0 0 1.15rem; padding-left:1.1rem; }
+.article ol{ margin:0 0 1.15rem; padding-left:1.4rem; }
 .article li{ color:var(--ink-soft); line-height:1.7; margin-bottom:.5rem; }
 .article li strong{ color:var(--ink); font-weight:600; }
 .article blockquote{
@@ -341,29 +342,19 @@ const FORUMS = [
       ["Introduction to the religion",""],
       ["Aqeedah","The core articles of Islamic creed and belief.",[
         ["Introduction to Aqeedah",""],
-        ["Usool al Fiqh and Sources of Evidence",""],
+        ["Sect",""],
         ["Tawhid",""],
         ["Kufr and Shirk",""],
-        ["Sunni Athari Creed",""],
-        ["Salafi Manhaj",""],
         ["Nawaqidul-Islam",""],
         ["Bidah",""],
         ["Iman and its Pillars",""],
         ["Pillars of Islam",""],
         ["Pillar of Ihsan",""],
         ["Takfir",""],
-        ["Udhr bil Jahil",""],
+        ["Udhr bil Jahil and Iqamatul Hujjah",""],
         ["Warning Against Heretics",""],
         ["Al Wala wal Bara",""],
         ["Kufr bi Taghut wa Iman Billah",""],
-        ["The Akhirah",""],
-        ["Ethics and Morality","",[
-          ["Defining good and evil",""],
-          ["Halal and its subsets",""],
-          ["Haram and its subsets",""]
-        ]],
-        ["End Times",""],
-        ["Creatures in Islam",""],
         ["Mind, Soul, Consciousness, Fitrah and Free Will",""]
       ]],
       ["How to Be Muslim","The essential requirements to enter and remain within Islam, and how to grow in faith beyond the bare minimum.",[
@@ -376,8 +367,20 @@ const FORUMS = [
         ["Ask Allah for Mercy, Forgiveness, and Make Du'a",""],
         ["Learn and Act Upon Islam",""]
       ]],
+      ["Specific Beliefs","",[
+        ["The Akhirah",""],
+        ["Creatures in Islam",""],
+        ["End Times",""],
+        ["Ethics and Morality","",[
+          ["Defining good and evil",""],
+          ["Halal and its subsets",""],
+          ["Haram and its subsets",""]
+        ]],
+        ["Special Religious Places on Earth",""]
+      ]],
       ["Fiqh","Islamic jurisprudence — its scope of worship and ethics, and its living tradition of rulings.",[
         ["Introduction to Fiqh",""],
+        ["Usool al Fiqh",""],
         ["Different acts of worship","The core acts of worship and their rulings.",[
           ["Salah",""],
           ["Purification",""],
@@ -405,7 +408,7 @@ const FORUMS = [
     icon:"compass",
     numbered:false,
     subs:[
-      ["Principles to establish before reading evidence for Islam","The epistemological groundwork for evaluating religious truth claims.",[
+      ["Principles to understand","The epistemological groundwork for evaluating religious truth claims.",[
         ["Logic and Truth",""],
         ["Existence and Essence",""],
         ["Space and Time",""],
@@ -464,7 +467,7 @@ const FORUMS = [
     icon:"shield",
     numbered:false,
     subs:[
-      ["Heretics","Responses to historical sects and beliefs considered outside mainstream orthodoxy.",[
+      ["Heretics","Responses to historical sects and beliefs considered outside mainstream orthodoxy. This section also covers individual people, not just sects.",[
         ["Asharis",""],
         ["Maturidis",""],
         ["Shias",""],
@@ -480,6 +483,7 @@ const FORUMS = [
         ["Karaamiyyah",""],
         ["As-Salimah",""],
         ["Jahmiyya",""],
+        ["Mufawwida",""],
         ["Sufis",""],
         ["Ikhwanis",""],
         ["Qutbis",""],
@@ -657,7 +661,7 @@ const CONTENT = {
 <blockquote>&ldquo;You must adhere to my Sunnah and the Sunnah of the Rightly-Guided Caliphs; hold fast to it and bite onto it with your molar teeth.&rdquo;<cite>Sunan Abi Dawud, 4607</cite></blockquote>
 <blockquote>&ldquo;Whoever turns away from my Sunnah is not of me.&rdquo;<cite>Sahih al-Bukhari, 5063</cite></blockquote>
 <blockquote>&ldquo;I have left two things among you. You will not go astray so long as you hold fast to them: the Book of Allah and the Sunnah of His Prophet.&rdquo;<cite>Muwatta Malik, 1661</cite></blockquote>
-<blockquote>&ldquo;Whoever revives a Sunnah from my Sunnah which has been killed after me, he will have a reward like that of whoever acts upon it&hellip;&rdquo;<cite>Jami&lsquo; at-Tirmidhi, 2676</cite></blockquote>
+<blockquote>&ldquo;Whoever revives a Sunnah from my Sunnah which has been killed after me, he will have a reward like that of whoever acts upon it&hellip;&rdquo;<cite>Jami&lsquo; at-Tirmidhi, 2677</cite></blockquote>
 <blockquote>&ldquo;The best discourse is the Book of Allah, and the best guidance is the guidance of Muhammad.&rdquo;<cite>Sahih Muslim, 867a</cite></blockquote>
 <blockquote>&ldquo;I have left you on a clear path, its night is like its day. No one strays from it after me but he will be destroyed.&rdquo;<cite>Sunan Ibn Majah, 43</cite></blockquote>
 <p><strong>Innovation is rejected:</strong></p>
@@ -670,17 +674,255 @@ const CONTENT = {
 "what-is-islam/aqeedah/introduction-to-aqeedah": `
 <p class="lede">The word Aqeedah comes from the Arabic root <em>&lsquo;aqada</em>, which literally means &ldquo;to tie a knot.&rdquo; In Islamic terminology, it refers to a firm, unshakeable belief in the heart that is free from any doubt &mdash; the creed or theology of Islam.</p>
 
-<p>If Fiqh (jurisprudence) deals with the outward actions of a Muslim (like how to pray or fast), Aqeedah deals with the inner beliefs. It is the foundation upon which all Islamic practice is built; without a sound Aqeedah, actions are considered void.</p>
+<p>Aqeedah deals with the foundation of belief upon which all Islamic practice is built; without a sound Aqeedah, actions are considered void.</p>
 
-<p>Aqeedah covers what we call Asl ad-deen (foundations of the religion) &mdash; without accepting and knowing these foundations you cannot be Muslim. But it also broadly covers non-foundational beliefs, depending on the colloquial usage of the word Aqeedah.</p>
+<p>Aqeedah comes before the practice of the religion, and the Companions themselves learned faith first. It was narrated that Jundub bin &lsquo;Abdullah said:</p>
 
-<p>In Aqeedah, there are things that are absolutely essential to being a Muslim; rejecting these is considered heresy, and you are considered a kaafir (disbeliever/non-Muslim).</p>
+<blockquote>&ldquo;We were with the Prophet (&#xFDFA;), and we were strong youths, so we learned faith before we learned Qur&rsquo;an. Then we learned Qur&rsquo;an and our faith increased thereby.&rdquo;<cite>Sunan Ibn Majah, 61</cite></blockquote>
 
-<p>Because in Islam, Faith (Iman in Arabic) is not purely within the belief of the religion being true. It is also in your actions and what you believe. Your faith even increases with good deeds and decreases with bad deeds. It also relates to why reverting to Islam requires one to pronounce the Shahada (Declaration of Faith), which we cover in the forum on how to be Muslim.</p>
+<p>Abdul-Ghani al-Mujaddidi said:</p>
 
-<p>In Islam, certain deeds/beliefs may affect your faith, and others may completely remove you from the fold of Islam.</p>
+<blockquote>&ldquo;From this, it is derived that one should study matters related to belief before studying Fiqh and the Qur&rsquo;an.&rdquo;<cite>See Inja&rsquo; al-Hajah, Sharh Sunan Ibn Majah</cite></blockquote>
 
-<p>I will cover Aqeedah in this channel, and I will go over the parts of Aqeedah that nullify your Islam if not met in the channel on the nullifiers of Islam, or Nawaqidul Islam, as well as the actions that remove one from Islam.</p>
+<p>Aqeedah covers what we call Asl ad-deen (foundations of the religion) &mdash; without accepting and knowing these foundations you cannot be Muslim. These are beliefs that are absolutely essential to being a Muslim; rejecting them is considered heresy, and you are considered a kaafir (disbeliever/non-Muslim).</p>
+
+<p>Faith (Iman in Arabic) in Islam is not purely within the belief of the religion being true. It is also in your actions and what you believe. Your faith even increases with good deeds and decreases with bad deeds. This also relates to why reverting to Islam requires one to pronounce the Shahada (Declaration of Faith), which we cover in the forum on how to be Muslim.</p>
+
+<p>Aqeedah is known through fitrah, &lsquo;aql, and mass transmission. These are things that all humans understand intuitively or that have been passed down by mass transmission, to the point where anyone who has heard of Islam has understood these beliefs. There is no excuse for the one whom Islam has reached and who does not accept these as true; only those whom Islam never reached have an excuse on the Day of Judgment.</p>
+
+<p>Allah Most High has said in the Quran:</p>
+
+<blockquote>&ldquo;And We would never punish (a people) until We have sent a messenger.&rdquo;<cite>Surah al-Isra, 17:15</cite></blockquote>
+
+<p>Imam Ibn Abi Hatim, in his Tafsir, narrates the following with a good chain. The Messenger of Allah &#xFDFA; said:</p>
+
+<blockquote>&ldquo;The one who died during the Fatrah will say, &lsquo;My Lord! No Book or Messenger came to me.&rsquo; Then he will recite the following ayah: &lsquo;Our Lord! If only You had sent us a messenger, we would have followed Your signs and become believers.&rsquo;&rdquo;<cite>Tafsir Ibn Abi Hatim; the ayah is Surah al-Qasas, 28:47</cite></blockquote>
+
+<p>Ibn Jarir and Ibn Abi Hatim narrate in their respective Tafsirs that Qatada said regarding this ayah:</p>
+
+<blockquote>&ldquo;Indeed Allah Most High will not punish anybody until news from Allah reaches him or until a proof from Allah reaches him (i.e. by means of the Messenger of Allah &#xFDFA;).&rdquo;<cite>Tafsir Ibn Jarir and Tafsir Ibn Abi Hatim</cite></blockquote>
+
+<blockquote>Abu Huraira reported Allah&rsquo;s Messenger (&#xFDFA;) as saying: No baby is born but upon Fitra. It is his parents who make him a Jew or a Christian or a Polytheist. A person said: Allah&rsquo;s Messenger, what is your opinion if they were to die before that (before reaching the age of adolescence when they can distinguish between right and wrong)? He said: It is Allah alone Who knows what they would be doing.<cite>Sahih Muslim, 2658e</cite></blockquote>
+
+<p>The Prophet &#xFDFA; said:</p>
+
+<blockquote>&ldquo;There are four who will present their case on the Day of Resurrection: a deaf man who never heard anything, an insane man, a very old and senile man, and a man who died during the Fatrah. As for the deaf man, he will say: &lsquo;O Lord, Islam came but I never heard anything.&rsquo; As for the insane man, he will say: &lsquo;O Lord, Islam came and the young boys were throwing camel dung at me.&rsquo; As for the senile man, he will say: &lsquo;O Lord, Islam came and I did not understand anything.&rsquo; As for the one who died during the Fatrah, he will say: &lsquo;O Lord, no Messenger from You came to me.&rsquo; Allah will accept their pledge of obedience to Him, then He will send word to them that they should enter the Fire. By the One in Whose Hand is the soul of Muhammad, if they enter it, it will be cool and safe for them.&rdquo;<cite>al-Tabaraanee (2/79) with a Saheeh sanad; Musnad Ahmad (16301); Ibn Hibbaan (1827); graded Saheeh by Shaikh al-Albaanee in al-Saheehah (1434), by Ibn al-Qayyim in Tareeq al-Hijratain (1/397), and by Shaikh Muqbil in Saheeh al-Musnad (19)</cite></blockquote>
+
+<p>Yazeed bin Abaan said: We said to Anas (may Allah be pleased with him): O Abu Hamzah! What do you say in regards to the children of the Mushriks? He said: The Messenger of Allah &#xFDFA; said:</p>
+
+<blockquote>&ldquo;They won&rsquo;t have any sins for which they would be punished, so that they would be the inhabitants of the Fire; neither would they have any good deeds for which they would be rewarded, so that they become the inhabitants of the Paradise. They will be the servants of the people of Paradise.&rdquo;<cite>Abu Dawood al-Tayaalisee in his Musnad (2225); al-Tabaraanee in Mu&lsquo;jam al-Awsat (5355) and Mu&lsquo;jam al-Kabeer (6993); al-Bazzaar (4516, 7466); graded &ldquo;Saheeh li shawaahid&rdquo; (authentic due to supporting chains) in al-Saheehah (1468)</cite></blockquote>
+
+<p>Anas (may Allah be pleased with him) said that the Prophet &#xFDFA; said:</p>
+
+<blockquote>&ldquo;Four (types of people) will come on the Day of Judgment: the infant, the insane, the one who died during al-Fatrah and a very old and senile man. Everyone will present their case. Allah will say to the neck from the Hellfire: {Arise!} And He will say to them: {I used to send Messengers to my slaves from among themselves, and I am a Messenger from Myself to you. So enter into this (Fire).} So those for whom misery was written will say: O Lord! How should we enter this, whereas this is what we are trying to run away from? As for those for whom happiness was written, they will be charging towards it (to enter it). Allah will say: {You (would have been) more severe in denying and disobeying My Messengers.} So those (who ran to enter the fire) will be made to enter the Jannah and those (who complained) will be made to enter the Hellfire.&rdquo;<cite>Musnad al-Bazzaar (7594); Musnad Abu Yu&lsquo;laa (4224). Shaikh al-Albaanee said that the Hadith with this chain is &ldquo;Dha&lsquo;eef&rdquo; (weak), but there are other Ahadith that raise its level (like the first Hadith of al-Aswad); see al-Saheehah (2468)</cite></blockquote>
+
+<p>Al-Haafidh Abu Bakr al-Bazzaar reported in his Musnad, on the authority of Thawbaan (may Allah be pleased with him), that the Prophet &#xFDFA; said:</p>
+
+<blockquote>&ldquo;When it will be the Day of Judgment, people from the days of ignorance will come forth carrying idols on their backs. Their Lord will ask them [in al-Zuhd of Ibn al-Mubaarak it is: Allah will ask them: {What did you used to worship?}] and they will say: O our Lord! You did not send any Messenger to us nor did we receive any commands from You. Had You sent us the Messenger we would have been Your obedient servants. Their Lord will say to them: {If I command you with a task will you obey Me?} They will say: Yes! They will be commanded to walk towards the Hellfire and enter it. They will walk towards it till when they come close to it, they will hear its raging and roaring. They will return back to their Lord saying: O our Lord! Take us out from it. He will say to them: {Did you not claim to Me that if I command you with a task, you will obey Me?} He will take a promise from them and say to them: {Go towards it and enter it.} They will (again) walk towards it till when they see it, they will disperse and return back. They will say: O our Lord! Distance us from it for we cannot enter it. He will say: {Enter it humiliated.}&rdquo; The Prophet &#xFDFA; said: &ldquo;Had they entered it the first time, they would have found it cool and safe (for them).&rdquo;<cite>Musnad al-Bazzaar (4169); the words within the brackets are from al-Zuhd (1323) of Ibn al-Mubaarak. Al-Haakim also reported it in al-Mustadrak (8390) and said: &ldquo;It is Saheeh as per the condition of al-Bukhaaree and Muslim but they did not report it,&rdquo; and al-Dhahabee agreed with him</cite></blockquote>
+
+<p>Imaam al-Dhuhlee reported on the authority of Abu Sa&lsquo;eed al-Khudree (may Allah be pleased with him) that the Prophet &#xFDFA; said:</p>
+
+<blockquote>&ldquo;(In regards to) the one who died during al-Fatrah, the insane and the infant. The one who died during the Fatrah will say: No Book had reached me. The insane will say: O my Lord! You did not give me a sound intellect so that I could distinguish what is good and what is evil. The infant will say: O my Lord! I did not reach adolescence. Then the fire will be raised for them and it will be said to them: {Enter it.}&rdquo; The Prophet &#xFDFA; said: &ldquo;So those who were in Allah&rsquo;s knowledge from the successful people &ndash; had they been given the chance to act (in this world) &ndash; they will enter it (and no harm will happen to them), and those who were in Allah&rsquo;s knowledge from the wretched people &ndash; had they been given the chance to act (in this world) &ndash; will hold back (from entering it). He will say (to those who did not enter): {You disobey Me (now), so how would you be had My Messengers come to you?}&rdquo;</blockquote>
+`,
+"what-is-islam/aqeedah/tawhid": `
+<p class="lede">Tawhid (توحيد) comes from the Arabic root <em>w-h-d</em> (و-ح-د), meaning &ldquo;unification&rdquo; or &ldquo;declaring something to be one.&rdquo; It is monotheism, the belief that Allah is One, unique, singular, and without equal or partner in His essence, attributes, and rights.</p>
+
+<p>Tawhid is the core foundation of Islam. It is the primary message delivered by every prophet from Adam to Muhammad (peace be upon them all). In the Qur&rsquo;an, the primary purpose of human creation is tied directly to Tawhid:</p>
+
+<blockquote>&ldquo;And I did not create the jinn and mankind except to worship Me.&rdquo;<cite>Surah Adh-Dhariyat, 51:56</cite></blockquote>
+
+<p>Scholars categorize Tawhid into three interconnected branches to help believers comprehensively understand and apply monotheism:</p>
+
+<ol>
+<li>Tawhid al-Rububiyyah (Monotheism of Lordship)</li>
+<li>Tawhid al-Uluhiyyah (Monotheism of Worship)</li>
+<li>Tawhid al-Asma&rsquo; wa-s-Sifat (Monotheism of Names and Attributes)</li>
+</ol>
+
+<h2>Tawhid al-Rububiyyah</h2>
+
+<p>Tawhid al-Rububiyyah is the firm belief that Allah alone is the Rabb (Lord, Sovereign, Sustainer, and Creator) of the entire universe. Allah is the sole creator of everything in existence from nothing. He owns everything. Nothing moves, functions, or exists outside of His absolute authority. He alone governs creation.</p>
+
+<p>Believing in Tawhid al-Rububiyyah alone does not make a person a Muslim by itself. The Qur&rsquo;an notes that the polytheists of Makkah recognized Allah as the Creator and Sustainer of the cosmos:</p>
+
+<blockquote>&ldquo;And if you asked them, &lsquo;Who created the heavens and earth?&rsquo; they would surely say, &lsquo;Allah.&rsquo;&rdquo;<cite>Surah Luqman, 31:25</cite></blockquote>
+
+<p>However, because they directed acts of prayer and sacrifice to idols as intermediaries, they lacked Tawhid al-Uluhiyyah.</p>
+
+<h2>Tawhid al-Uluhiyyah</h2>
+
+<p>Tawhid al-Uluhiyyah (also called Tawhid al-Ibadah) focuses on unifying Allah through human actions. It is the practical implementation of monotheism: directing all acts of worship &mdash; both internal and external &mdash; solely to Allah, without associating any partners, saints, angels, or intermediaries.</p>
+
+<blockquote>&ldquo;Say, &lsquo;Indeed, my prayer, my rites of sacrifice, my living and my dying are for Allah, Lord of the worlds. No partner has He.&rsquo;&rdquo;<cite>Surah Al-An&rsquo;am, 6:162&ndash;163</cite></blockquote>
+
+<p>Directing any act of worship to creation (whether an idol, a grave, a living or deceased person, or an angel) violates Tawhid al-Uluhiyyah and constitutes Shirk (associating partners with Allah, idolatry, polytheism, the opposite of tawhid).</p>
+
+<h2>Tawhid al-Asma&rsquo; wa-s-Sifat</h2>
+
+<p>Tawhid al-Asma&rsquo; wa-s-Sifat is the affirmation of every Name and Attribute that Allah has affirmed for Himself in the Qur&rsquo;an or through His Prophet (&#xFDFA;) in authentic Hadiths, in a manner that befits His majesty.</p>
+
+<p>Abu Hurairah (may Allah be pleased with him) reported that the Messenger of Allah (&#xFDFA;) said:</p>
+
+<blockquote>&ldquo;Allah has ninety-nine names, one hundred minus one; whoever enumerates (ahsaha) them will enter Paradise.&rdquo;<cite>Sahih al-Bukhari, 2736; Sahih Muslim, 2677</cite></blockquote>
+
+<a class="video-link" href="https://99namesofallah.name/" target="_blank" rel="noopener">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+  List of the 99 Names of Allah
+</a>
+
+<p>Scholars explain that &ldquo;enumerating&rdquo; (<em>Ihsah</em>) the names involves three levels:</p>
+
+<ol>
+<li>Memorizing their words and list.</li>
+<li>Understanding their linguistic meanings and implications.</li>
+<li>Acting upon them &mdash; calling upon Allah through them in supplication (dua) and shaping one&rsquo;s character in accordance with their lessons (e.g., being merciful because Allah is Ar-Rahman).</li>
+</ol>
+
+<p>Memorizing His names is strongly recommended, but the core of this form of Tawhid comes down to simply affirming them for Allah and only Allah, and acknowledging that all of His attributes are for Him and Him alone. He is entirely unique!</p>
+
+<blockquote>&ldquo;Nor is there to Him any equivalent.&rdquo;<cite>Surah Al-Ikhlas, 112:4</cite></blockquote>
+
+<blockquote>&ldquo;There is nothing like unto Him, and He is the Hearing, the Seeing.&rdquo;<cite>Surah Ash-Shura, 42:11</cite></blockquote>
+
+<p>This verse combines two essential principles:</p>
+
+<ol>
+<li>&ldquo;There is nothing like unto Him&rdquo; &mdash; Negates any resemblance to creation.</li>
+<li>&ldquo;And He is the Hearing, the Seeing&rdquo; &mdash; Affirms His real attributes of Hearing (As-Sami&rsquo;) and Seeing (Al-Basir).</li>
+</ol>
+`,
+"what-is-islam/aqeedah/sect": `
+<p class="lede">Every Muslim must be a Sunni, Athari and a Salafi!</p>
+
+<p>Now what do these words even mean and why do we use them?</p>
+
+<h2>Sunni</h2>
+
+<p>Sunni literally stems from the Arabic phrase <em>Ahl as-Sunnah wa&rsquo;l-Jam&#257;&lsquo;ah</em>, which translates to &ldquo;People of the Sunnah and the Community.&rdquo;</p>
+
+<p>At its core, being Sunni means adhering to the Sunnah (the recorded teachings, sayings, actions, and approvals of the Prophet Muhammad &#xFDFA;). It basically means you follow the Prophet &#xFDFA;, which is obviously mandatory for every Muslim!</p>
+
+<p>The reason we even use the term Sunni is to distinguish ourselves from heretics, like the Shias, who do not accept the Sunnah, even if they claim to!</p>
+
+<h2>Athari</h2>
+
+<p>The term Athari refers to the Athari creed, which is a methodology of how we interpret the attributes of Allah.</p>
+
+<p>One must affirm what Allah affirmed for Himself and what the Prophet &#xFDFA; affirmed for Him, without:</p>
+
+<ul>
+<li><strong>Tahrif</strong> (distortion)</li>
+<li><strong>Ta&rsquo;til</strong> (denial)</li>
+<li><strong>Takyif</strong> (asking &ldquo;how&rdquo;)</li>
+<li><strong>Tamthil</strong> (likening to creation)</li>
+<li>Denying the meaning</li>
+</ul>
+
+<p><strong>Example:</strong> Allah has eyes. We affirm that without distorting it, without denying it, without asking how, and without saying that His eyes are like those of animals or humans. His eyes are not like ours whatsoever, but He does have &ldquo;eyes.&rdquo; The modality of His eyes is unknown (how they are, how they look, how they work, etc.) and they are unlike the eyes of creatures, but their existence (we know Allah has eyes) and their meaning (Allah can see) are known!</p>
+
+<p>An analogy I like to use is &ldquo;Existence, Knowledge and a Will&rdquo;:</p>
+
+<ul>
+<li>Does a human exist?</li>
+<li>Does a human have knowledge?</li>
+<li>Does a human have a will?</li>
+</ul>
+
+<p>Yes.</p>
+
+<p>Does Allah exist, have knowledge, and have a will?</p>
+
+<p>Yes.</p>
+
+<p>But <strong>none</strong> of those attributes are the same as they are in humans. And we do not know precisely how they are.</p>
+
+<p>This is what we call affirming <em>Bila Kayf</em> (without modality), where you affirm the meaning but not the modality.</p>
+
+<p>When asked about how Allah rose over His Throne (Istiwa&rsquo;), Imam Malik (d. 179 AH) famously stated:</p>
+
+<blockquote>&ldquo;The rising (Istiwa&rsquo;) is known in meaning, the modality (Kayf) is ungraspable by mind, believing in it is obligatory, and asking &lsquo;how&rsquo; about it is an innovation.&rdquo;</blockquote>
+
+<p>And Allah&rsquo;s attributes are of three types: <strong>essential</strong> (what he is), <strong>volitional</strong> (his actions), and <strong>relational</strong> (his relations to other than himself).</p>
+
+<p>To understand the difference between the three better, go here:</p>
+
+<a class="cta-link" href="#/forum/why-islam-is-true/principles-to-understand/existence-and-essence">
+  Go to Existence and Essence
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+</a>
+
+<p>In summary, Allah has inseparable essential attributes, which are what he is, but he also can act and has relations to other than himself. His actions can occur in time. This does not mean he changes, because those are his <strong>actions</strong>; his essence remains unchanging and eternal. But his actions are <strong>not created</strong>. Take his speech: it is not created because he did not create it, he <strong>did</strong> it. It is his action, not his creation! That is why we say the Qur&rsquo;an is uncreated: it is literally his word, and his words are his action of speech, so it is uncreated! Of course, paper and ink are created. We are not saying a print of the Qur&rsquo;an is uncreated, i.e. what it is written on or what we write it with; that is created, but <strong>what</strong> is written is uncreated!</p>
+
+<p><strong>Examples of essential attributes Allah has:</strong> Eternal, All powerful, All knowing, Unique, Has eyes, Has a face, Has arms, His ability to speak, His ability to hear, His ability to see, His ability to laugh, his ability to forgive, etc.</p>
+
+<p><strong>Examples of volitional attributes He has:</strong> Rising, Descending, Blessing, Creating, Forgiving, Laughing, etc.</p>
+
+<p><strong>Examples of relational attributes He has:</strong> Him being above us (creation), Him being our creator, etc.</p>
+
+<p>Notice how the capacity to do things is eternal and essential in Allah, but the <em>instances</em> of these attributes in action are volitional; they occur in time.</p>
+
+<p>Also, when we say Allah is above, we do not mean above such that he is inside space as a container, because his aboveness is relational and unlike creation; we do not affirm space is a container to begin with! He is above and separate from all creation, exalted is He.</p>
+
+<h2>Salafi</h2>
+
+<p><strong>Linguistic meaning:</strong> The word <em>Salaf</em> (سَلَف) literally means &ldquo;predecessors,&rdquo; &ldquo;ancestors,&rdquo; or &ldquo;those who came before.&rdquo;</p>
+
+<p><strong>Terminological meaning:</strong> In Islamic terminology, <em>Al-Salaf al-Salih</em> (the Pious Predecessors) refers specifically to the first three generations of the Muslim Ummah:</p>
+
+<ol>
+<li>The Sahabah (the Companions of the Prophet &#xFDFA;)</li>
+<li>The Tabi&lsquo;un (the Successors who met the Companions)</li>
+<li>Taba&lsquo; al-Tabi&lsquo;in (the Successors of the Successors)</li>
+</ol>
+
+<p><strong>Salafi</strong> (سَلَفِي): An attribution (<em>nisbah</em>) meaning one who attaches themselves to the methodology (Manhaj) and creed (&lsquo;Aqeeda) of these first three generations, taking their consensus and understanding of the Quran and Sunnah as the binding standard for practicing Islam.</p>
+
+<p>Scholars use several explicit Hadiths to prove that following the path of the Sahabah and early generations is mandatory.</p>
+
+<p><strong>The Superiority of the First Three Generations</strong></p>
+
+<p>The Prophet &#xFDFA; explicitly elevated these three generations above all subsequent ones:</p>
+
+<blockquote>&ldquo;The best of people are my generation, then those who follow them, then those who follow them.&rdquo;<cite>Sahih al-Bukhari, 2652; Sahih Muslim, 2533</cite></blockquote>
+
+<p>Scholars reason that if the Prophet &#xFDFA; declared these generations to be the best in knowledge, practice, and understanding, deviating from their collective understanding in favor of later opinions leads to lower guidance or misguidance.</p>
+
+<p><strong>The Explicit Command to Follow the Caliphs and Companions</strong></p>
+
+<p>In the famous Hadith of Al-Irbad ibn Sariyah (may Allah be pleased with him), the Prophet &#xFDFA; gave a binding directive regarding times of disagreement:</p>
+
+<blockquote>&ldquo;He among you who lives long after me will see much difference. So hold fast to my Sunnah and the Sunnah of the Rightly-Guided Caliphs; bite onto it with your molar teeth. And beware of newly invented matters [in religion], for every newly invented matter is an innovation, and every innovation is misguidance.&rdquo;<cite>Sunan Abi Dawud, 4607; Sunan at-Tirmidhi, 2676 &mdash; graded Sahih</cite></blockquote>
+
+<p>Here, the Prophet &#xFDFA; explicitly commanded obedience to the way of his Rightly-Guided Caliphs (Abu Bakr, &lsquo;Umar, &lsquo;Uthman, and &lsquo;Ali) alongside his own Sunnah, establishing their practice as a binding proof (<em>hujjah</em>)! They are all part of the Salaf!</p>
+
+<p><strong>The Hadith of the Saved Sect (Al-Firqah an-Najiyah)</strong></p>
+
+<p>The Prophet &#xFDFA; foretold the division of the Ummah and specified the single path to salvation:</p>
+
+<blockquote>&ldquo;My Ummah will divide into seventy-three sects; all of them will be in the Fire except one.&rdquo; They asked: &ldquo;O Messenger of Allah, which one is it?&rdquo; He replied: &ldquo;That which I and my Companions are upon today.&rdquo;<cite>Sunan at-Tirmidhi, 2641 &mdash; graded Hasan</cite></blockquote>
+
+<p>By defining the &ldquo;Saved Sect&rdquo; as those who strictly remain upon what he and his Companions practiced, adhering to the way of the Sahabah is established as a requirement for salvation from religious deviation.</p>
+
+<p><strong>Hadiths on Consensus (Ijma&lsquo;) and the Jama&lsquo;ah</strong></p>
+
+<p>The principle of Ijma&lsquo; (scholarly consensus) is intimately tied to the Salaf. The early consensus of the Companions and their successors is protected from error by divine guarantee.</p>
+
+<p>Ibn Umar reported: The Messenger of Allah &#xFDFA; said:</p>
+
+<blockquote>&ldquo;Verily, Allah will not let my nation agree upon misguidance. The hand of Allah is over the united community.&rdquo;<cite>Sunan at-Tirmidhi, 2167 &mdash; graded Sahih (authentic)</cite></blockquote>
+
+<p>Therefore, the ijma&lsquo; (consensus) of the Salaf is <strong>binding</strong>; anyone who rejects it is a kaafir. And one ought to follow their way in all matters.</p>
+
+<p><strong>The reasoning:</strong> If you reject the Messenger, you reject Allah; and if you reject the consensus of the Salaf and their trustworthiness, then you reject the Messenger. Therefore, if you reject the Salaf, you reject Allah, which is kufr!</p>
+
+<p>Let me make it clear again: <strong>anyone</strong> who is <strong>not</strong> Sunni, who is <strong>not</strong> Athari, and who is <strong>not</strong> Salafi, is <strong>not</strong> a Muslim!</p>
+
+<p>For a full refutation of many deviant sects, beliefs, and people, click here:</p>
+
+<a class="cta-link" href="#/forum/refutations/heretics">
+  Go to Heretics
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+</a>
 `,
 "what-is-islam/how-to-be-muslim/know-islam-and-believe-islam-is-true": `
 <blockquote>&ldquo;Indeed, the religion in the sight of Allah is Islam.&rdquo;<cite>Quran 3:19</cite></blockquote>
@@ -1123,7 +1365,7 @@ A brilliant channel focused on breaking down Arabic grammar, vocabulary, and Qur
   <p><strong>A note of caution:</strong> Do not take knowledge from some of these sites blindly — be wary of what they say, as several contain deviance, and you should NOT take Aqeedah from them. This applies especially to sites that host the opinions of “scholars,” where there is a lot of deviance mixed in. Some of the sites listed here are simply neutral resources (search tools, manuscript archives, dictionaries), for which this isn’t a concern. Everything above is linked because these are huge libraries containing a lot of good knowledge — use discernment, and verify what you read against reliable scholars.</p>
 </div>
 `,
-"why-islam-is-true/principles-to-establish-before-reading-evidence-for-islam/logic-and-truth": `
+"why-islam-is-true/principles-to-understand/logic-and-truth": `
 <p class="lede">Let&rsquo;s start simple: something is <strong>True</strong> when it matches reality, and <strong>False</strong> when it doesn&rsquo;t.</p>
 
 <p>Logic, at its core, isn&rsquo;t some abstract invention floating out there &mdash; it&rsquo;s just the basic rules that describe how reality and things actually behave. There are three of these rules that everything runs on, whether you&rsquo;ve ever thought about them or not.</p>
@@ -1150,7 +1392,7 @@ A brilliant channel focused on breaking down Arabic grammar, vocabulary, and Qur
 
 <p>This conclusion isn&rsquo;t optional, it&rsquo;s <em>necessary</em>. It&rsquo;s forced by the rules themselves: Dai is a human (that&rsquo;s just what he is), humans are mortal (also just what they are), so Dai must be mortal. The only way out would be for Dai to somehow be mortal and not mortal at the same time &mdash; and that breaks the rule that a thing can&rsquo;t be both true and false at once. So the conclusion is locked in.</p>
 `,
-"why-islam-is-true/principles-to-establish-before-reading-evidence-for-islam/existence-and-essence": `
+"why-islam-is-true/principles-to-understand/existence-and-essence": `
 <p class="lede">You&rsquo;ll often see the words <em>Thing</em>, <em>Existent</em>, <em>Essence</em>, <em>Being</em>, and <em>Reality</em> used throughout this site. Here&rsquo;s what they actually mean.</p>
 
 <p>An existent, an essence, and a being are all the same thing: <strong>what something is</strong> &mdash; something that exists (to exist means to be something rather than nothing).</p>
@@ -1160,7 +1402,7 @@ A brilliant channel focused on breaking down Arabic grammar, vocabulary, and Qur
 <p>We call the individual attributes of any given essence its <strong>essential attributes</strong> (or essential properties).</p>
 
 <h2>Volitional and relational attributes</h2>
-<p>Not every attribute is part of something&rsquo;s essence. There are also <strong>volitional</strong> and <strong>relational</strong> attributes, which sit outside the essence itself.</p>
+<p>Not every attribute is part of something&rsquo;s essence. There are also <strong>volitional</strong> and <strong>relational</strong> attributes.</p>
 
 <p>For example, &ldquo;Dai is running&rdquo; is one of my attributes &mdash; but it isn&rsquo;t essential to me, it isn&rsquo;t part of my essence, and it doesn&rsquo;t make up my identity or what I am. It&rsquo;s simply what I&rsquo;m <em>doing</em>.</p>
 
@@ -1175,7 +1417,7 @@ A brilliant channel focused on breaking down Arabic grammar, vocabulary, and Qur
   <p><strong>A note on terminology:</strong> Existence has two meanings &mdash; it can refer to an essence, or to a thing in general. &ldquo;Reality&rdquo; simply means &ldquo;all that exists,&rdquo; so it can mean all essences or all things. And &ldquo;Thing&rdquo; is genuinely general &mdash; it can mean an essence, a property, an action, or a relation.</p>
 </div>
 `,
-"why-islam-is-true/principles-to-establish-before-reading-evidence-for-islam/space-and-time": `
+"why-islam-is-true/principles-to-understand/space-and-time": `
 <h2>What is time?</h2>
 
 <p>Time actually has several distinct meanings, depending on what you&rsquo;re talking about:</p>
@@ -1199,7 +1441,7 @@ A brilliant channel focused on breaking down Arabic grammar, vocabulary, and Qur
 
 <p>Similarly, space is not a container or a substance. Space is simply how things are arranged relative to each other &mdash; <em>next to</em>, <em>above</em>, <em>inside</em>, <em>far</em>, <em>near</em>. Allah being &ldquo;above creation&rdquo; is a real relation, not a physical container like a box. Space is just relations between existents.</p>
 `,
-"why-islam-is-true/principles-to-establish-before-reading-evidence-for-islam/evidence-and-probability": `
+"why-islam-is-true/principles-to-understand/evidence-and-probability": `
 <h2>The four types of judgements</h2>
 
 <ul>
@@ -1233,7 +1475,7 @@ A brilliant channel focused on breaking down Arabic grammar, vocabulary, and Qur
 
 <p>But what proves we&rsquo;re not being tricked, or caught in some illusion? We can verify that our senses are probably not lying to us: reason can filter out errors, and we have multiple senses that let us cross-check ourselves, as well as other people to cross-check with. You cannot outright reject empiricism &mdash; even with the most extreme skepticism, we can use these filters to verify ourselves and infer what is most probable.</p>
 `,
-"why-islam-is-true/principles-to-establish-before-reading-evidence-for-islam/causality": `
+"why-islam-is-true/principles-to-understand/causality": `
 <h2>Randomness and causality</h2>
 
 <p>&ldquo;Randomness&rdquo; has several different meanings depending on the field, so it helps to separate them before asking whether Islam accepts or rejects it.</p>
@@ -1284,6 +1526,8 @@ A brilliant channel focused on breaking down Arabic grammar, vocabulary, and Qur
 
 <blockquote>Abu Huraira reported Allah&rsquo;s Messenger (&#xFDFA;) as saying: No baby is born but upon Fitra. It is his parents who make him a Jew or a Christian or a Polytheist. A person said: Allah&rsquo;s Messenger, what is your opinion if they were to die before that (before reaching the age of adolescence when they can distinguish between right and wrong)? He said: It is Allah alone Who knows what they would be doing.<cite>Sahih Muslim, 2658e</cite></blockquote>
 <blockquote>Abu Huraira reported: The Prophet, peace and blessings be upon him, said, &ldquo;Five acts are a part of the Fitrah (human instinct): circumcision, shaving pubic hair, plucking hair from the armpits, shortening the moustache, and clipping the nails.&rdquo;<cite>Sahih al-Bukhari, 5889; Sahih Muslim, 257</cite></blockquote>
+
+<p>The belief in a soul that can choose, knows itself, can discern between good and evil, and is inclined towards monotheism and good is an essential belief in Islam.</p>
 `,
 "why-islam-is-true/a-creator-must-exist": `
 <h2>Logic is defined by</h2>
@@ -1530,29 +1774,39 @@ function renderSub(fid, slug){
   );
 }
 
-function renderLeaf(fid, slug, childSlug){
+function renderNode(fid, slugs){
   const f = forumById(fid);
   if(!f){ location.hash = "#/index"; return; }
-  const idx = f.subs.findIndex(([title]) => slugify(title) === slug);
-  if(idx === -1){ location.hash = `#/forum/${fid}`; return; }
-  const [title,, children] = f.subs[idx];
-  if(!children){ location.hash = `#/forum/${fid}/${slug}`; return; }
-  const cidx = children.findIndex(([ct]) => slugify(ct) === childSlug);
-  if(cidx === -1){ location.hash = `#/forum/${fid}/${slug}`; return; }
-  const [ctitle, cdesc, grandchildren] = children[cidx];
+  let list = f.subs, path = `#/forum/${f.id}`;
+  const chain = [];
+  for(const sl of slugs){
+    const i = list ? list.findIndex(([t]) => slugify(t) === sl) : -1;
+    if(i === -1){ location.hash = path; return; }
+    const [t, d, c] = list[i];
+    path += "/" + sl;
+    chain.push({t, d, c, href: path});
+    list = c;
+  }
+  const node = chain[chain.length - 1];
+  const parent = chain.length > 1 ? chain[chain.length - 2] : null;
+  const backHref = parent ? parent.href : `#/forum/${f.id}`;
+  const backLabel = parent ? parent.t : f.title;
+  const crumbs = [{label:"Index",href:"#/index"},{label:f.title,href:`#/forum/${f.id}`}]
+    .concat(chain.map((n, i) => i < chain.length - 1 ? {label:n.t, href:n.href} : {label:n.t}));
+  const eyebrow = [f.title].concat(chain.slice(0, -1).map(n => n.t)).join(" · ");
 
-  if(grandchildren && grandchildren.length){
-    const items = tocList(grandchildren, gt => `#/forum/${f.id}/${slug}/${childSlug}/${slugify(gt)}`, false);
+  if(node.c && node.c.length){
+    const items = tocList(node.c, ct => `${node.href}/${slugify(ct)}`, false);
     app.innerHTML = `
     <div class="view">
-      ${topbar([{label:"Index",href:"#/index"},{label:f.title,href:`#/forum/${f.id}`},{label:title,href:`#/forum/${f.id}/${slug}`},{label:ctitle}])}
+      ${topbar(crumbs)}
       <main>
-        <div class="forum-head"><h1>${ctitle}</h1></div>
-        <p class="forum-sub">${cdesc || ""}</p>
+        <div class="forum-head"><h1>${node.t}</h1></div>
+        <p class="forum-sub">${node.d || ""}</p>
         <div class="toc">${items}</div>
-        <a class="back-link" href="#/forum/${f.id}/${slug}">
+        <a class="back-link" href="${backHref}">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12H6M11 6l-6 6 6 6"/></svg>
-          Back to ${title}
+          Back to ${backLabel}
         </a>
       </main>
       <footer>Ilm — for study and reflection.</footer>
@@ -1560,49 +1814,13 @@ function renderLeaf(fid, slug, childSlug){
     return;
   }
 
-  const cbody = CONTENT[`${f.id}/${slug}/${childSlug}`];
-  const ccrumbs = [{label:"Index",href:"#/index"},{label:f.title,href:`#/forum/${f.id}`},{label:title,href:`#/forum/${f.id}/${slug}`},{label:ctitle}];
-  if(cbody){
-    app.innerHTML = articlePage(ccrumbs, f.title + " · " + title, ctitle, cdesc, cbody, `#/forum/${f.id}/${slug}`, title);
+  const body = CONTENT[`${f.id}/${slugs.join("/")}`];
+  if(body){
+    app.innerHTML = articlePage(crumbs, eyebrow, node.t, node.d, body, backHref, backLabel);
     return;
   }
 
-  app.innerHTML = placeholderPage(
-    ccrumbs,
-    f.title + " · " + title,
-    ctitle, cdesc,
-    `#/forum/${f.id}/${slug}`, title
-  );
-}
-
-function renderDeep(fid, slug, childSlug, grandSlug){
-  const f = forumById(fid);
-  if(!f){ location.hash = "#/index"; return; }
-  const idx = f.subs.findIndex(([title]) => slugify(title) === slug);
-  if(idx === -1){ location.hash = `#/forum/${fid}`; return; }
-  const [title,, children] = f.subs[idx];
-  if(!children){ location.hash = `#/forum/${fid}/${slug}`; return; }
-  const cidx = children.findIndex(([ct]) => slugify(ct) === childSlug);
-  if(cidx === -1){ location.hash = `#/forum/${fid}/${slug}`; return; }
-  const [ctitle,, grandchildren] = children[cidx];
-  if(!grandchildren){ location.hash = `#/forum/${fid}/${slug}/${childSlug}`; return; }
-  const gidx = grandchildren.findIndex(([gt]) => slugify(gt) === grandSlug);
-  if(gidx === -1){ location.hash = `#/forum/${fid}/${slug}/${childSlug}`; return; }
-  const [gtitle, gdesc] = grandchildren[gidx];
-
-  const gbody = CONTENT[`${f.id}/${slug}/${childSlug}/${grandSlug}`];
-  const gcrumbs = [{label:"Index",href:"#/index"},{label:f.title,href:`#/forum/${f.id}`},{label:title,href:`#/forum/${f.id}/${slug}`},{label:ctitle,href:`#/forum/${f.id}/${slug}/${childSlug}`},{label:gtitle}];
-  if(gbody){
-    app.innerHTML = articlePage(gcrumbs, f.title + " · " + title + " · " + ctitle, gtitle, gdesc, gbody, `#/forum/${f.id}/${slug}/${childSlug}`, ctitle);
-    return;
-  }
-
-  app.innerHTML = placeholderPage(
-    gcrumbs,
-    f.title + " · " + title + " · " + ctitle,
-    gtitle, gdesc,
-    `#/forum/${f.id}/${slug}/${childSlug}`, ctitle
-  );
+  app.innerHTML = placeholderPage(crumbs, eyebrow, node.t, node.d, backHref, backLabel);
 }
 
 /* ============ ROUTER ============ */
@@ -1615,8 +1833,7 @@ function route(){
   if(parts[0] === "index"){ renderIndex(); return; }
   if(parts[0] === "forum" && parts[1] && !parts[2]){ renderForum(parts[1]); return; }
   if(parts[0] === "forum" && parts[1] && parts[2] && !parts[3]){ renderSub(parts[1], parts[2]); return; }
-  if(parts[0] === "forum" && parts[1] && parts[2] && parts[3] && !parts[4]){ renderLeaf(parts[1], parts[2], parts[3]); return; }
-  if(parts[0] === "forum" && parts[1] && parts[2] && parts[3] && parts[4]){ renderDeep(parts[1], parts[2], parts[3], parts[4]); return; }
+  if(parts[0] === "forum" && parts[1] && parts[2] && parts[3]){ renderNode(parts[1], parts.slice(2)); return; }
   renderIntro();
 }
 window.addEventListener("hashchange", route);
