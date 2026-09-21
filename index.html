@@ -257,6 +257,9 @@ main{ max-width:1080px; margin:0 auto; padding: clamp(2rem,5vw,4rem) clamp(1.25r
 .article h2{
   font-size:1.35rem; margin:2.4rem 0 .9rem; color:var(--ink);
 }
+.article h3{
+  font-size:1.08rem; margin:1.9rem 0 .7rem; color:var(--ink);
+}
 .article ul{ margin:0 0 1.15rem; padding-left:1.1rem; }
 .article ol{ margin:0 0 1.15rem; padding-left:1.4rem; }
 .article li{ color:var(--ink-soft); line-height:1.7; margin-bottom:.5rem; }
@@ -270,6 +273,15 @@ main{ max-width:1080px; margin:0 auto; padding: clamp(2rem,5vw,4rem) clamp(1.25r
   display:block; margin-top:.35rem; font-style:normal;
   font-size:.82rem; letter-spacing:.02em; color:var(--ink-soft);
 }
+.article .ar{
+  direction:rtl; text-align:right; font-style:normal;
+  font-size:1.15rem; line-height:2.1; color:var(--ink);
+  margin:0 0 .6rem;
+}
+.article p a, .article li a{
+  color:var(--gold-2); text-decoration:underline; text-underline-offset:2px;
+}
+.article p a:hover, .article li a:hover{ opacity:.75; }
 .article .cta-link, .article .video-link{
   display:inline-flex; align-items:center; gap:.5rem;
   margin:.3rem 0 1.4rem; padding:.55rem 1.1rem;
@@ -347,15 +359,29 @@ const FORUMS = [
         ["Kufr and Shirk",""],
         ["Nawaqidul-Islam",""],
         ["Bidah",""],
-        ["Iman and its Pillars",""],
+        ["Pillars of Iman",""],
         ["Pillars of Islam",""],
         ["Pillar of Ihsan",""],
         ["Takfir",""],
         ["Udhr bil Jahil and Iqamatul Hujjah",""],
-        ["Warning Against Heretics",""],
         ["Al Wala wal Bara",""],
         ["Kufr bi Taghut wa Iman Billah",""],
-        ["Mind, Soul, Consciousness, Fitrah and Free Will",""]
+        ["Mind, Soul, Consciousness, Fitrah and Free Will",""],
+        ["Specific Beliefs","This section is extra &mdash; not knowing it does not necessarily nullify your Islam, as long as the very basics are affirmed. The other Aqeedah sections above cover the essential stuff and basics.",[
+          ["The Akhirah",""],
+          ["Creatures in Islam",""],
+          ["End Times",""],
+          ["Ethics and Morality","",[
+            ["Defining good and evil",""],
+            ["Halal and its subsets",""],
+            ["Haram and its subsets",""]
+          ]],
+          ["Special Religious Places on Earth",""],
+          ["List of Good and Bad Deeds",""],
+          ["Harming Others",""],
+          ["Life in the States of Taghut",""],
+          ["Caliphate and Dar al Islam",""]
+        ]]
       ]],
       ["How to Be Muslim","The essential requirements to enter and remain within Islam, and how to grow in faith beyond the bare minimum.",[
         ["Know Islam and Believe Islam is True",""],
@@ -366,17 +392,6 @@ const FORUMS = [
         ["Do Good Deeds As Much As You Can",""],
         ["Ask Allah for Mercy, Forgiveness, and Make Du'a",""],
         ["Learn and Act Upon Islam",""]
-      ]],
-      ["Specific Beliefs","",[
-        ["The Akhirah",""],
-        ["Creatures in Islam",""],
-        ["End Times",""],
-        ["Ethics and Morality","",[
-          ["Defining good and evil",""],
-          ["Halal and its subsets",""],
-          ["Haram and its subsets",""]
-        ]],
-        ["Special Religious Places on Earth",""]
       ]],
       ["Fiqh","Islamic jurisprudence — its scope of worship and ethics, and its living tradition of rulings.",[
         ["Introduction to Fiqh",""],
@@ -389,7 +404,8 @@ const FORUMS = [
           ["Pilgrimage",""],
           ["Dhikr",""],
           ["Tawbah and Istighfar",""],
-          ["Habits",""]
+          ["Habits",""],
+          ["Eid",""]
         ]],
         ["Tasweer",""],
         ["Awrah",""],
@@ -541,7 +557,7 @@ const CONTENT = {
 <blockquote>&ldquo;Yes, whoever submits his face [i.e., self] to Allah while being a doer of good will have his reward with his Lord.&rdquo;<cite>Quran 2:112</cite></blockquote>
 <blockquote>&ldquo;And whoever desires other than Islam as religion &ndash; never will it be accepted from him, and he, in the Hereafter, will be among the losers.&rdquo;<cite>Quran 3:85</cite></blockquote>
 
-<p>Islam teaches that there is only one divine being, the creator of the heavens and the earth, his name is Allah.</p>
+<p>Islam teaches that there is only one divine being, the creator of the heavens and the earth, and His name is Allah.</p>
 <blockquote>&ldquo;Say, &lsquo;He is Allah, [who is] One, Allah, the Eternal Refuge. He neither begets nor is born, nor is there to Him any equivalent.&rsquo;&rdquo;<cite>Quran 112:1&ndash;4</cite></blockquote>
 <blockquote>&ldquo;Indeed, your Lord is Allah, who created the heavens and the earth in six days and then established Himself above the Throne.&rdquo;<cite>Quran 7:54</cite></blockquote>
 
@@ -553,12 +569,12 @@ const CONTENT = {
 
 <h2>The Oneness of Allah</h2>
 
-<p>Muslims believe Allah has no partners in divinity, which includes having no son, and nothing in the universe is similar to Him. Muslims believe that Allah is the Originator and Sustainer of the universe and that he created human beings to worship Him alone.</p>
+<p>Muslims believe Allah has no partners in divinity, which includes having no son, and nothing in the universe is similar to Him. Muslims believe that Allah is the Originator and Sustainer of the universe and that He created human beings to worship Him alone.</p>
 <blockquote>&ldquo;Allah has not taken any son, nor has there ever been with Him any deity.&rdquo;<cite>Quran 23:91</cite></blockquote>
 <blockquote>&ldquo;There is nothing like unto Him, and He is the Hearing, the Seeing.&rdquo;<cite>Quran 42:11</cite></blockquote>
 <blockquote>&ldquo;And I did not create the jinn and mankind except to worship Me.&rdquo;<cite>Quran 51:56</cite></blockquote>
 
-<p>To worship anything besides Allah is considered blasphemy. The reward for worshiping Him alone and following his path is goodness in this world and Paradise in the next.</p>
+<p>To worship anything besides Allah is considered blasphemy. The reward for worshiping Him alone and following His path is goodness in this world and Paradise in the next.</p>
 <blockquote>&ldquo;Indeed, Allah does not forgive association with Him, but He forgives what is less than that for whom He wills.&rdquo;<cite>Quran 4:48</cite></blockquote>
 
 <p>This does not mean that Allah cannot forgive idolatry (Shirk). The verse refers to a person who does not repent from that Shirk. If a person does repent, Allah forgives all sins:</p>
@@ -577,10 +593,10 @@ const CONTENT = {
 <blockquote>&ldquo;&hellip;and to David We gave the Psalms.&rdquo;<cite>Quran 4:163</cite></blockquote>
 <blockquote>&ldquo;And We sent, following in their footsteps, Jesus, the son of Mary, confirming that which came before him in the Torah; and We gave him the Gospel&hellip;&rdquo;<cite>Quran 5:46</cite></blockquote>
 
-<p>The Holy Qur&rsquo;an is the last revelation from Allah sent to all of mankind and it was revealed to his final messenger, Prophet Muhammad (peace be upon him).</p>
+<p>The Holy Qur&rsquo;an is the last revelation from Allah sent to all of mankind and it was revealed to His final messenger, Prophet Muhammad (peace be upon him).</p>
 <blockquote>&ldquo;Indeed, it is We who sent down the Qur&rsquo;an and indeed, We will be its guardian.&rdquo;<cite>Quran 15:9</cite></blockquote>
 
-<p>Muslims believe that Islam is not a new religion, it is the same message revealed to the Prophets of the past. Their shared message was the Oneness of Allah, Monotheism, also called Tawhid in Arabic. They all were sent to spread the message that only Allah is worthy of worship, only he is the owner of creation and that only he has divine attributes.</p>
+<p>Muslims believe that Islam is not a new religion; it is the same message revealed to the Prophets of the past. Their shared message was the Oneness of Allah, Monotheism, also called Tawhid in Arabic. They all were sent to spread the message that only Allah is worthy of worship, only He is the owner of creation and that only He has divine attributes.</p>
 <blockquote>&ldquo;And We sent not before you any messenger except that We revealed to him that, &lsquo;There is no deity except Me, so worship Me.&rsquo;&rdquo;<cite>Quran 21:25</cite></blockquote>
 
 <p>From the beginning of mankind until the present day Allah has sent a Prophet to every nation to guide them to the truth. They were sent to teach their people to worship God alone and not to ascribe any divine partners to Him.</p>
@@ -648,7 +664,7 @@ const CONTENT = {
 
 <h2>Following the Messenger &#xFDFA;</h2>
 
-<p>In the Qur&rsquo;an, Muslims are ordered to follow the teachings of Allah and his Messenger &#xFDFA;. Therefore, whatever the Prophet &#xFDFA; told us we accept, because Allah himself told us to do so. That is why every Muslim follows the Qur&rsquo;an and the Hadiths (Reports) from the Prophet &#xFDFA;, which contain his Sunnah (his actions, words, etc) which we follow as revelation, because the Qur&rsquo;an says the Prophet &#xFDFA; does not speak from desires, he only orders in religion what was revealed to him.</p>
+<p>In the Qur&rsquo;an, Muslims are ordered to follow the teachings of Allah and His Messenger &#xFDFA;. Therefore, whatever the Prophet &#xFDFA; told us we accept, because Allah Himself told us to do so. That is why every Muslim follows the Qur&rsquo;an and the Hadiths (Reports) from the Prophet &#xFDFA;, which contain his Sunnah (his actions, words, etc) which we follow as revelation, because the Qur&rsquo;an says the Prophet &#xFDFA; does not speak from desires, he only orders in religion what was revealed to him.</p>
 <blockquote>&ldquo;O you who have believed, obey Allah and obey the Messenger&hellip;&rdquo;<cite>Quran 4:59</cite></blockquote>
 <blockquote>&ldquo;Say, &lsquo;Obey Allah and the Messenger.&rsquo; But if they turn away &ndash; then indeed, Allah does not like the disbelievers.&rdquo;<cite>Quran 3:32</cite></blockquote>
 <blockquote>&ldquo;Nor does he speak from [his own] desire. It is not but a revelation revealed.&rdquo;<cite>Quran 53:3&ndash;4</cite></blockquote>
@@ -669,7 +685,7 @@ const CONTENT = {
 <blockquote>&ldquo;If somebody innovates something which is not in harmony with the principles of our religion, that thing is rejected.&rdquo;<cite>Sahih al-Bukhari, 2697</cite></blockquote>
 <p><strong>Doing what he commanded, as much as you can:</strong></p>
 <p>The Prophet &#xFDFA; said:</p>
-<blockquote>&ldquo;Avoid that which I forbid you to do, and do that which I command you to do as much as you can.&rdquo;<cite>Sahih al-Bukhari, 6849</cite></blockquote>
+<blockquote>&ldquo;Avoid that which I forbid you to do, and do that which I command you to do as much as you can.&rdquo;<cite>Sahih al-Bukhari, 7288</cite></blockquote>
 `,
 "what-is-islam/aqeedah/introduction-to-aqeedah": `
 <p class="lede">The word Aqeedah comes from the Arabic root <em>&lsquo;aqada</em>, which literally means &ldquo;to tie a knot.&rdquo; In Islamic terminology, it refers to a firm, unshakeable belief in the heart that is free from any doubt &mdash; the creed or theology of Islam.</p>
@@ -706,21 +722,21 @@ const CONTENT = {
 
 <p>The Prophet &#xFDFA; said:</p>
 
-<blockquote>&ldquo;There are four who will present their case on the Day of Resurrection: a deaf man who never heard anything, an insane man, a very old and senile man, and a man who died during the Fatrah. As for the deaf man, he will say: &lsquo;O Lord, Islam came but I never heard anything.&rsquo; As for the insane man, he will say: &lsquo;O Lord, Islam came and the young boys were throwing camel dung at me.&rsquo; As for the senile man, he will say: &lsquo;O Lord, Islam came and I did not understand anything.&rsquo; As for the one who died during the Fatrah, he will say: &lsquo;O Lord, no Messenger from You came to me.&rsquo; Allah will accept their pledge of obedience to Him, then He will send word to them that they should enter the Fire. By the One in Whose Hand is the soul of Muhammad, if they enter it, it will be cool and safe for them.&rdquo;<cite>al-Tabaraanee (2/79) with a Saheeh sanad; Musnad Ahmad (16301); Ibn Hibbaan (1827); graded Saheeh by Shaikh al-Albaanee in al-Saheehah (1434), by Ibn al-Qayyim in Tareeq al-Hijratain (1/397), and by Shaikh Muqbil in Saheeh al-Musnad (19)</cite></blockquote>
+<blockquote>&ldquo;There are four who will present their case on the Day of Resurrection: a deaf man who never heard anything, an insane man, a very old and senile man, and a man who died during the Fatrah. As for the deaf man, he will say: &lsquo;O Lord, Islam came but I never heard anything.&rsquo; As for the insane man, he will say: &lsquo;O Lord, Islam came and the young boys were throwing camel dung at me.&rsquo; As for the senile man, he will say: &lsquo;O Lord, Islam came and I did not understand anything.&rsquo; As for the one who died during the Fatrah, he will say: &lsquo;O Lord, no Messenger from You came to me.&rsquo; Allah will accept their pledge of obedience to Him, then He will send word to them that they should enter the Fire. By the One in Whose Hand is the soul of Muhammad, if they enter it, it will be cool and safe for them.&rdquo;<cite>al-Tabarani (2/79) with a Sahih sanad; Musnad Ahmad (16301); Ibn Hibban (1827); graded Sahih by Shaykh al-Albani in as-Sahihah (1434), by Ibn al-Qayyim in Tariq al-Hijratayn (1/397), and by Shaykh Muqbil in Sahih al-Musnad (19)</cite></blockquote>
 
-<p>Yazeed bin Abaan said: We said to Anas (may Allah be pleased with him): O Abu Hamzah! What do you say in regards to the children of the Mushriks? He said: The Messenger of Allah &#xFDFA; said:</p>
+<p>Yazid bin Aban said: We said to Anas (may Allah be pleased with him): O Abu Hamzah! What do you say in regards to the children of the Mushriks? He said: The Messenger of Allah &#xFDFA; said:</p>
 
-<blockquote>&ldquo;They won&rsquo;t have any sins for which they would be punished, so that they would be the inhabitants of the Fire; neither would they have any good deeds for which they would be rewarded, so that they become the inhabitants of the Paradise. They will be the servants of the people of Paradise.&rdquo;<cite>Abu Dawood al-Tayaalisee in his Musnad (2225); al-Tabaraanee in Mu&lsquo;jam al-Awsat (5355) and Mu&lsquo;jam al-Kabeer (6993); al-Bazzaar (4516, 7466); graded &ldquo;Saheeh li shawaahid&rdquo; (authentic due to supporting chains) in al-Saheehah (1468)</cite></blockquote>
+<blockquote>&ldquo;They won&rsquo;t have any sins for which they would be punished, so that they would be the inhabitants of the Fire; neither would they have any good deeds for which they would be rewarded, so that they become the inhabitants of the Paradise. They will be the servants of the people of Paradise.&rdquo;<cite>Abu Dawud al-Tayalisi in his Musnad (2225); al-Tabarani in al-Mu&lsquo;jam al-Awsat (5355) and al-Mu&lsquo;jam al-Kabir (6993); al-Bazzar (4516, 7466); graded &ldquo;Sahih li shawahid&rdquo; (authentic due to supporting chains) in as-Sahihah (1468)</cite></blockquote>
 
 <p>Anas (may Allah be pleased with him) said that the Prophet &#xFDFA; said:</p>
 
-<blockquote>&ldquo;Four (types of people) will come on the Day of Judgment: the infant, the insane, the one who died during al-Fatrah and a very old and senile man. Everyone will present their case. Allah will say to the neck from the Hellfire: {Arise!} And He will say to them: {I used to send Messengers to my slaves from among themselves, and I am a Messenger from Myself to you. So enter into this (Fire).} So those for whom misery was written will say: O Lord! How should we enter this, whereas this is what we are trying to run away from? As for those for whom happiness was written, they will be charging towards it (to enter it). Allah will say: {You (would have been) more severe in denying and disobeying My Messengers.} So those (who ran to enter the fire) will be made to enter the Jannah and those (who complained) will be made to enter the Hellfire.&rdquo;<cite>Musnad al-Bazzaar (7594); Musnad Abu Yu&lsquo;laa (4224). Shaikh al-Albaanee said that the Hadith with this chain is &ldquo;Dha&lsquo;eef&rdquo; (weak), but there are other Ahadith that raise its level (like the first Hadith of al-Aswad); see al-Saheehah (2468)</cite></blockquote>
+<blockquote>&ldquo;Four (types of people) will come on the Day of Judgment: the infant, the insane, the one who died during al-Fatrah and a very old and senile man. Everyone will present their case. Allah will say to the neck from the Hellfire: {Arise!} And He will say to them: {I used to send Messengers to my slaves from among themselves, and I am a Messenger from Myself to you. So enter into this (Fire).} So those for whom misery was written will say: O Lord! How should we enter this, whereas this is what we are trying to run away from? As for those for whom happiness was written, they will be charging towards it (to enter it). Allah will say: {You (would have been) more severe in denying and disobeying My Messengers.} So those (who ran to enter the fire) will be made to enter the Jannah and those (who complained) will be made to enter the Hellfire.&rdquo;<cite>Musnad al-Bazzar (7594); Musnad Abu Ya&lsquo;la (4224). Shaykh al-Albani said that the Hadith with this chain is &ldquo;Da&lsquo;if&rdquo; (weak), but there are other Ahadith that raise its level (like the first Hadith of al-Aswad); see as-Sahihah (2468)</cite></blockquote>
 
-<p>Al-Haafidh Abu Bakr al-Bazzaar reported in his Musnad, on the authority of Thawbaan (may Allah be pleased with him), that the Prophet &#xFDFA; said:</p>
+<p>Al-Hafiz Abu Bakr al-Bazzar reported in his Musnad, on the authority of Thawban (may Allah be pleased with him), that the Prophet &#xFDFA; said:</p>
 
-<blockquote>&ldquo;When it will be the Day of Judgment, people from the days of ignorance will come forth carrying idols on their backs. Their Lord will ask them [in al-Zuhd of Ibn al-Mubaarak it is: Allah will ask them: {What did you used to worship?}] and they will say: O our Lord! You did not send any Messenger to us nor did we receive any commands from You. Had You sent us the Messenger we would have been Your obedient servants. Their Lord will say to them: {If I command you with a task will you obey Me?} They will say: Yes! They will be commanded to walk towards the Hellfire and enter it. They will walk towards it till when they come close to it, they will hear its raging and roaring. They will return back to their Lord saying: O our Lord! Take us out from it. He will say to them: {Did you not claim to Me that if I command you with a task, you will obey Me?} He will take a promise from them and say to them: {Go towards it and enter it.} They will (again) walk towards it till when they see it, they will disperse and return back. They will say: O our Lord! Distance us from it for we cannot enter it. He will say: {Enter it humiliated.}&rdquo; The Prophet &#xFDFA; said: &ldquo;Had they entered it the first time, they would have found it cool and safe (for them).&rdquo;<cite>Musnad al-Bazzaar (4169); the words within the brackets are from al-Zuhd (1323) of Ibn al-Mubaarak. Al-Haakim also reported it in al-Mustadrak (8390) and said: &ldquo;It is Saheeh as per the condition of al-Bukhaaree and Muslim but they did not report it,&rdquo; and al-Dhahabee agreed with him</cite></blockquote>
+<blockquote>&ldquo;When it will be the Day of Judgment, people from the days of ignorance will come forth carrying idols on their backs. Their Lord will ask them [in al-Zuhd of Ibn al-Mubarak it is: Allah will ask them: {What did you used to worship?}] and they will say: O our Lord! You did not send any Messenger to us nor did we receive any commands from You. Had You sent us the Messenger we would have been Your obedient servants. Their Lord will say to them: {If I command you with a task will you obey Me?} They will say: Yes! They will be commanded to walk towards the Hellfire and enter it. They will walk towards it till when they come close to it, they will hear its raging and roaring. They will return back to their Lord saying: O our Lord! Take us out from it. He will say to them: {Did you not claim to Me that if I command you with a task, you will obey Me?} He will take a promise from them and say to them: {Go towards it and enter it.} They will (again) walk towards it till when they see it, they will disperse and return back. They will say: O our Lord! Distance us from it for we cannot enter it. He will say: {Enter it humiliated.}&rdquo; The Prophet &#xFDFA; said: &ldquo;Had they entered it the first time, they would have found it cool and safe (for them).&rdquo;<cite>Musnad al-Bazzar (4169); the words within the brackets are from al-Zuhd (1323) of Ibn al-Mubarak. Al-Hakim also reported it in al-Mustadrak (8390) and said: &ldquo;It is Sahih as per the condition of al-Bukhari and Muslim but they did not report it,&rdquo; and al-Dhahabi agreed with him</cite></blockquote>
 
-<p>Imaam al-Dhuhlee reported on the authority of Abu Sa&lsquo;eed al-Khudree (may Allah be pleased with him) that the Prophet &#xFDFA; said:</p>
+<p>Imam adh-Dhuhli reported on the authority of Abu Sa&lsquo;id al-Khudri (may Allah be pleased with him) that the Prophet &#xFDFA; said:</p>
 
 <blockquote>&ldquo;(In regards to) the one who died during al-Fatrah, the insane and the infant. The one who died during the Fatrah will say: No Book had reached me. The insane will say: O my Lord! You did not give me a sound intellect so that I could distinguish what is good and what is evil. The infant will say: O my Lord! I did not reach adolescence. Then the fire will be raised for them and it will be said to them: {Enter it.}&rdquo; The Prophet &#xFDFA; said: &ldquo;So those who were in Allah&rsquo;s knowledge from the successful people &ndash; had they been given the chance to act (in this world) &ndash; they will enter it (and no harm will happen to them), and those who were in Allah&rsquo;s knowledge from the wretched people &ndash; had they been given the chance to act (in this world) &ndash; will hold back (from entering it). He will say (to those who did not enter): {You disobey Me (now), so how would you be had My Messengers come to you?}&rdquo;</blockquote>
 `,
@@ -791,6 +807,100 @@ const CONTENT = {
 <li>&ldquo;And He is the Hearing, the Seeing&rdquo; &mdash; Affirms His real attributes of Hearing (As-Sami&rsquo;) and Seeing (Al-Basir).</li>
 </ol>
 `,
+"what-is-islam/aqeedah/kufr-and-shirk": `
+<h2>The Concept of Kufr (Disbelief)</h2>
+
+<h3>Definition and Nature</h3>
+
+<p>Linguistically, Kufr (كفر) means &ldquo;to cover&rdquo; or &ldquo;to conceal.&rdquo; In Islamic theology, it refers to disbelief in Allah, His Messenger (&#xFDFA;), or any core tenet of Islamic revelation.</p>
+
+<p>In the creed of Ahl al-Sunnah wa-l-Jama&lsquo;ah, Iman (faith) is not merely a passive internal conviction; it consists of three inseparable components:</p>
+
+<ol>
+<li>Belief in the heart (<em>Tasdiq bi-l-qalb</em>)</li>
+<li>Speech of the tongue (<em>Iqrar bi-l-lisan</em>)</li>
+<li>Actions of the limbs (<em>&lsquo;Amal bi-l-arkan</em>)</li>
+</ol>
+
+<p>Because Iman incorporates speech and action alongside internal belief, a person can only exit Islam through Kufr, and every nullifier of Islam (Nawaqid al-Islam) constitutes Kufr.</p>
+
+<p>Consequently, Kufr can occur through beliefs, statements, or physical actions &mdash; even if an individual remains internally convinced that Islam is the truth. A prime example is Iblis (Satan) or Pharaoh: both possessed internal conviction (Tasdiq) that Allah is the supreme Lord, yet they became disbelievers through arrogant refusal, action, and explicit defiance.</p>
+
+<h3>Major Kufr vs. Minor Kufr (Kufr Duna Kufr)</h3>
+
+<p>Islamic scholarship divides Kufr into two distinct categories:</p>
+
+<p><strong>1. Major Kufr (Kufr Akbar)</strong></p>
+
+<p>Major Kufr completely nullifies a person&rsquo;s Islam, expels them from the faith, and renders all their deeds void if they die upon it. It manifests in various forms, such as:</p>
+
+<ul>
+<li><strong>Kufr of Denial/Rejection (Takdhib):</strong> Denying any explicit part of the Qur&rsquo;an or authentic Sunnah.</li>
+<li><strong>Kufr of Arrogance/Refusal (Istikbar):</strong> Acknowledging the truth internally but refusing to submit (e.g., the Kufr of Iblis).</li>
+<li><strong>Kufr of Mockery (Istihza&rsquo;):</strong> Ridiculing Allah, His verses, or His Messenger.</li>
+<li><strong>Kufr of Replacement/Legislating (Tashri&lsquo;):</strong> Enacting man-made laws to override, replace, or sit as equal alongside the Shariah of Allah.</li>
+</ul>
+
+<p><strong>2. Minor Kufr (Kufr Asghar / Kufr Duna Kufr)</strong></p>
+
+<p>Minor Kufr refers to major sins that the Qur&rsquo;an or Sunnah label as &ldquo;kufr&rdquo; out of severity, but which do not expel a person from Islam or strip them of their faith entirely.</p>
+
+<h3>The Distinction in Rule and Law (Hukm)</h3>
+
+<p>A classic example demonstrating the difference between Major Kufr and Minor Kufr is ruling by other than Allah&rsquo;s revelation:</p>
+
+<ul>
+<li><strong>Minor Kufr (Kufr Duna Kufr):</strong> A judge or ruler who judges by non-Islamic laws in a specific case due to personal desire, a bribe, or favoritism, while fully acknowledging that Allah&rsquo;s law is supreme and that his own action is a sinful transgression. This is Kufr Duna Kufr (a lesser disbelief that does not expel one from Islam).</li>
+<li><strong>Major Kufr (Kufr Akbar):</strong> A ruler, legislator, or authority who enacts a law or system to replace the Shariah, or who believes that man-made laws are superior to, equal to, or more suitable for society than Allah&rsquo;s law. This act of alternative legislation constitutes Major Kufr that expels one from the fold of Islam.</li>
+</ul>
+
+<h2>The Concept of Shirk (Polytheism &amp; Association)</h2>
+
+<h3>Definition</h3>
+
+<p>Linguistically, Shirk (شرك) means &ldquo;sharing&rdquo; or &ldquo;associating partners.&rdquo; Religiously, it means assigning a partner, equal, or rival (<em>Nidd</em>) to Allah in His Lordship (Rububiyyah), His exclusive right to worship (Uluhiyyah), or His Names and Attributes (Asma&rsquo; wa-s-Sifat).</p>
+
+<h3>Major Shirk vs. Minor Shirk</h3>
+
+<p><strong>1. Major Shirk (Shirk Akbar)</strong></p>
+
+<p>Directing any form of worship &mdash; such as supplication (Dua), ritual sacrifice (Nahr), vows (Nathr), or ultimate spiritual fear/hope &mdash; to anyone or anything other than Allah (e.g., worshipping idols, calling upon dead saints, angels, or celestial bodies).</p>
+
+<p>Major Shirk completely nullifies Islam and is the one sin that Allah explicitly declares He will not forgive if a person dies upon it without repenting:</p>
+
+<blockquote>&ldquo;Indeed, Allah does not forgive association with Him, but He forgives what is less than that for whom He wills.&rdquo;<cite>Surah An-Nisa, 4:48</cite></blockquote>
+
+<p><strong>2. Minor Shirk (Shirk Asghar)</strong></p>
+
+<p>Acts that serve as a pathway toward Major Shirk or contain an element of associating created things with Allah in word or intention, but do not expel the doer from Islam.</p>
+
+<ul>
+<li><strong>Showing Off (Riya&rsquo;):</strong> Performing a religious act (like prolonging prayer or giving charity) specifically so that people will praise your piety.</li>
+<li><strong>Swearing by Other Than Allah:</strong> Swearing an oath by one&rsquo;s parents, honor, or a created object (without believing that the object possesses divine attributes).</li>
+</ul>
+
+<h2>The Legislative Equivalence: All Kufr is Shirk &amp; All Shirk is Kufr</h2>
+
+<p>While the terms Kufr and Shirk have distinct literal definitions in the Arabic language, doctrinally and legislatively (<em>Shar&lsquo;an</em>) they represent the exact same reality. Every person who commits Major Kufr is a Mushrik (polytheist), and every person who commits Major Shirk is a Kafir (disbeliever).</p>
+
+<h3>Why Major Kufr Necessarily Involves Shirk</h3>
+
+<p>When a person commits Major Kufr, they leave the fold of Islam. By exiting Islam, they forfeit Tawhid (the exclusive devotion of worship and submission to Allah).</p>
+
+<p>In Islamic theology, there is no neutral state of human existence. A human being is either submitting exclusively to Allah (Muwahhid) or submitting to something else. When a disbeliever rejects Allah&rsquo;s revelation &mdash; even if they claim to be an atheist or a rationalist &mdash; they have elevated their own human intellect, desires, or societal norms above Allah&rsquo;s authority. In doing so, they have taken their own desires or intellect as a rival deity alongside Allah, making them a Mushrik.</p>
+
+<p>Al-Albani detailed this theological realization, explaining how he arrived at the conclusion that Kufr and Shirk are legislatively identical:</p>
+
+<blockquote>&ldquo;I used to think that maybe there was a mistake on behalf of the narrator [of the hadith where the Prophet &#xFDFA; said leaving the salah is shirk]; I was a student of knowledge. Then later our Lord granted me success in understanding, even if it was when I was older, alhamdulillah, [He granted me success in understanding it] such that I recognized that legislatively, as opposed to linguistically, there is no difference between Kufr and Shirk.<br><br>So all Kufr is Shirk and all Shirk is Kufr; there is no difference between them legislatively. Linguistically there is, because in the language Kufr means &lsquo;to cover.&rsquo; Shirk is to make something a partner of another, like the polytheists who make equals with Allah.<br><br>But later I came to recognize that every unbeliever, even if he wasn&rsquo;t a polytheist linguistically, he was in reality. No unbeliever is free from being anything but a polytheist [mushrik]. Our Lord said: &lsquo;Have you seen he who has taken as his god his [own] desire?&rsquo; [Surah Al-Jathiyah 45:23] He took as his god his own desires! So, everyone who follows his desires has made it a partner with Allah. Thus, any Kufr &mdash; [for example] if someone were to reject a letter from the Noble Qur&rsquo;an &mdash; it would mean that he has put his intellect in charge and has taken it as a god, and it is from this angle that the Shirk has come.<br><br>So, the one who said that all disbelief is polytheism and all polytheism is disbelief spoke truthfully, not like the one who says that not all Kufr is Shirk like you heard from At-Tahawi.<br><br>In reality, this is knowledge which is very rare and is something through which many, many problems are resolved&hellip;&rdquo;<cite>Al-Albani</cite></blockquote>
+
+<p>For example:</p>
+
+<ol>
+<li>A materialist or atheist who rejects Allah&rsquo;s revelation has submitted their devotion to &ldquo;nature,&rdquo; human intellect, or worldly desires.</li>
+<li>By setting up human reasoning or natural forces as the ultimate truth over Allah&rsquo;s revelation, they have taken those things as partners with Allah (Shirk).</li>
+<li>Therefore, their rejection is not &ldquo;less than Shirk&rdquo;; it is Shirk. As a result, anyone who dies upon Major Kufr or Atheism without repenting falls directly under the unpardonable category described in Surah An-Nisa (4:48).</li>
+</ol>
+`,
 "what-is-islam/aqeedah/sect": `
 <p class="lede">Every Muslim must be a Sunni, Athari and a Salafi!</p>
 
@@ -838,11 +948,19 @@ const CONTENT = {
 
 <p>This is what we call affirming <em>Bila Kayf</em> (without modality), where you affirm the meaning but not the modality.</p>
 
+<p>Allah says in the Quran:</p>
+
+<blockquote>&ldquo;The Most Merciful [who is] above the Throne established.&rdquo;<cite>Quran 20:5</cite></blockquote>
+
+<p>Mu&lsquo;awiyah ibn al-Hakam (may Allah be pleased with him) slapped his slave girl and came to the Prophet &#xFDFA; asking whether he should free her. He narrated what happened next:</p>
+
+<blockquote>&ldquo;Bring her to me.&rdquo; So I brought her to him and he said to her: &ldquo;Where is Allah?&rdquo; She said: &ldquo;Above the heavens.&rdquo; He said: &ldquo;Who am I?&rdquo; She said: &ldquo;You are the Messenger of Allah.&rdquo; He said: &ldquo;Set her free, for she is a believer.&rdquo;<cite>Sahih Muslim, 537</cite></blockquote>
+
 <p>When asked about how Allah rose over His Throne (Istiwa&rsquo;), Imam Malik (d. 179 AH) famously stated:</p>
 
 <blockquote>&ldquo;The rising (Istiwa&rsquo;) is known in meaning, the modality (Kayf) is ungraspable by mind, believing in it is obligatory, and asking &lsquo;how&rsquo; about it is an innovation.&rdquo;</blockquote>
 
-<p>And Allah&rsquo;s attributes are of three types: <strong>essential</strong> (what he is), <strong>volitional</strong> (his actions), and <strong>relational</strong> (his relations to other than himself).</p>
+<p>And Allah&rsquo;s attributes are of three types: <strong>essential</strong> (what He is), <strong>volitional</strong> (His actions), and <strong>relational</strong> (His relations to other than Himself).</p>
 
 <p>To understand the difference between the three better, go here:</p>
 
@@ -851,9 +969,9 @@ const CONTENT = {
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
 </a>
 
-<p>In summary, Allah has inseparable essential attributes, which are what he is, but he also can act and has relations to other than himself. His actions can occur in time. This does not mean he changes, because those are his <strong>actions</strong>; his essence remains unchanging and eternal. But his actions are <strong>not created</strong>. Take his speech: it is not created because he did not create it, he <strong>did</strong> it. It is his action, not his creation! That is why we say the Qur&rsquo;an is uncreated: it is literally his word, and his words are his action of speech, so it is uncreated! Of course, paper and ink are created. We are not saying a print of the Qur&rsquo;an is uncreated, i.e. what it is written on or what we write it with; that is created, but <strong>what</strong> is written is uncreated!</p>
+<p>In summary, Allah has inseparable essential attributes, which are what He is, but He also can act and has relations to other than Himself. His actions can occur in time. This does not mean He changes, because those are His <strong>actions</strong>; His essence remains unchanging and eternal. But His actions are <strong>not created</strong>. Take His speech: it is not created because He did not create it, He <strong>did</strong> it. It is His action, not His creation! That is why we say the Qur&rsquo;an is uncreated: it is literally His word, and His words are His action of speech, so it is uncreated! Of course, paper and ink are created. We are not saying a print of the Qur&rsquo;an is uncreated, i.e. what it is written on or what we write it with; that is created, but <strong>what</strong> is written is uncreated!</p>
 
-<p><strong>Examples of essential attributes Allah has:</strong> Eternal, All powerful, All knowing, Unique, Has eyes, Has a face, Has arms, His ability to speak, His ability to hear, His ability to see, His ability to laugh, his ability to forgive, etc.</p>
+<p><strong>Examples of essential attributes Allah has:</strong> Eternal, All powerful, All knowing, Unique, Has eyes, Has a face, Has arms, His ability to speak, His ability to hear, His ability to see, His ability to laugh, His ability to forgive, etc.</p>
 
 <p><strong>Examples of volitional attributes He has:</strong> Rising, Descending, Blessing, Creating, Forgiving, Laughing, etc.</p>
 
@@ -861,7 +979,7 @@ const CONTENT = {
 
 <p>Notice how the capacity to do things is eternal and essential in Allah, but the <em>instances</em> of these attributes in action are volitional; they occur in time.</p>
 
-<p>Also, when we say Allah is above, we do not mean above such that he is inside space as a container, because his aboveness is relational and unlike creation; we do not affirm space is a container to begin with! He is above and separate from all creation, exalted is He.</p>
+<p>Also, when we say Allah is above, we do not mean above such that He is inside space as a container, because His aboveness is relational and unlike creation; we do not affirm space is a container to begin with! He is above and separate from all creation, exalted is He.</p>
 
 <h2>Salafi</h2>
 
@@ -920,9 +1038,435 @@ const CONTENT = {
 <p>For a full refutation of many deviant sects, beliefs, and people, click here:</p>
 
 <a class="cta-link" href="#/forum/refutations/heretics">
-  Go to Heretics
+`,
+"what-is-islam/aqeedah/takfir": `
+<p class="lede">Takfir is declaring another to be a disbeliever.</p>
+
+<p>Takfir is part of Asl ad-Deen &mdash; the foundations of the religion. You cannot be Muslim without it. You must declare as a disbeliever anyone who does not affirm Islam for himself, and anyone who does not meet the requirements of being Muslim, because otherwise you are implying that a kaafir is a Muslim, which is itself Kufr.</p>
+
+<a class="cta-link" href="#/forum/what-is-islam/how-to-be-muslim">
+  See the requirements of being Muslim
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
 </a>
+
+<h2>Who must be declared a disbeliever</h2>
+
+<p>Anyone who does not affirm Islam, does not have the correct Aqeedah, has not fulfilled the pillars of the religion, or who performs one of the nullifiers of Islam &mdash; you are obligated to make Takfir of him.</p>
+
+<p>This does not mean you treat them violently or insult them, but you cannot consider them Muslim. And anyone who fails to do this &mdash; who fails to make Takfir of a kaafir &mdash; has himself nullified his own Islam.</p>
+
+<h2>Dar al-Islam and Dar al-Kufr</h2>
+
+<p>There are also nuances depending on whether one lives in a Muslim state or a non-Muslim state.</p>
+
+<div class="sf-panel">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 8v5M12 16h.01M12 3l9 16H3L12 3Z"/></svg>
+  <p>In our times, there are no true Muslim states &mdash; all of them rule by Kufr. This section is theoretical, until the next Caliphate forms. This is covered in more depth in the Caliphate and Dar al-Islam section.</p>
+</div>
+
+<a class="cta-link" href="#/forum/what-is-islam/aqeedah/specific-beliefs/caliphate-and-dar-al-islam">
+  Go to Caliphate and Dar al-Islam
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+</a>
+
+<p>In Dar al-Islam (the land of Islam), or in any land where Islam and Muslims are the majority, it is enough for someone to affirm Islam for you to believe him. You do not need to interrogate his Aqeedah in detail &mdash; you simply treat him as Muslim, based on his affirmation and outward practice, until you see clear evidence otherwise.</p>
+
+<p>But when Kufr is the majority &mdash; in lands where Kufr dominates, or among groups where Kufr is the norm &mdash; this default trust no longer applies in the same way. In that case, we apply Takfir bil-Umum and Takfir ad-Dar.</p>
+
+<h2>Takfir bil-Umum and Takfir ad-Dar</h2>
+
+<p><strong>Takfir bil-Umum</strong> means to make Takfir of a group generally. <strong>Takfir ad-Dar</strong> means to make Takfir of a land and the people in it.</p>
+
+<p>These two forms of Takfir apply specifically to lands or groups where Kufr is the majority &mdash; not to Muslim-majority lands. In a majority-Kufr land or group, simply hearing someone claim Islam is not enough on its own: you cannot consider anyone Muslim unless you verify his Islam in depth, by asking him about his Aqeedah, his practices, and so on.</p>
+
+<div class="sf-panel">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 8v5M12 16h.01M12 3l9 16H3L12 3Z"/></svg>
+  <p><strong>The scope, in practice, today:</strong> The rule itself is tied to whether Islam or Kufr is the majority in a given land or group &mdash; it is not, in principle, a rule for &ldquo;every Muslim everywhere.&rdquo; But as covered above in the Dar al-Islam and Dar al-Kufr section, there is no true Muslim-majority land in our times in this sense &mdash; every existing state rules by Kufr. So in practice, today, this in-depth verification applies broadly, everywhere you actually are, until that changes.</p>
+</div>
+
+<a class="cta-link" href="#/forum/what-is-islam/how-to-be-muslim">
+  See all the conditions of being Muslim
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+</a>
+
+<h2>Evidence: judging by the outward</h2>
+
+<p>Takfir ad-Dar and Takfir bil-Umum are built on a principle: we judge people and lands by what is outwardly apparent (Dhahir), not by certain knowledge of what is hidden in every individual heart (Batin) &mdash; that belongs to Allah alone. A land or group can correctly be judged as a whole, even while individual, unknown exceptions may exist within it.</p>
+
+<blockquote>Sahnun ibn Sa&rsquo;id informed us, saying: I said to Ibn al-Qasim: &ldquo;Did Malik dislike a man engaging in trade in the land of war?&rdquo; He said: &ldquo;Yes. Malik strongly disliked it, and he would say: &lsquo;He should not go to their lands, where the laws of polytheism are enforced upon him.&rsquo;&rdquo;<cite>Al-Mudawwanah, 3/294</cite></blockquote>
+
+<blockquote>If a man joins the abode of war and does not apostatize from Islam, then he is an apostate by his leaving the abode of Islam.<cite>Al-Hasan Al-Basri, in Ahkam Al-Quran by Al-Jassas, 2/302</cite></blockquote>
+
+<p>Al-Hasan Al-Basri&rsquo;s statement shows that a person&rsquo;s outward situation &mdash; here, which land he attaches himself to &mdash; carries a real ruling on its own, even without a separate, explicit declaration of apostasy from him. This is judging by the outward.</p>
+
+<blockquote>Abraham did not tell a lie except on three occasions. Twice for the sake of Allah, when he said, &ldquo;I am sick,&rdquo; and he said, &ldquo;(I have not done this but) the big idol has done it.&rdquo; The third was that while Abraham and Sarah (his wife) were going on a journey, they passed by the territory of a tyrant. Someone said to the tyrant, &ldquo;This man is accompanied by a very charming lady.&rdquo; So he sent for Abraham and asked him about Sarah, saying, &ldquo;Who is this lady?&rdquo; Abraham said, &ldquo;She is my sister.&rdquo; Abraham went to Sarah and said, &ldquo;O Sarah! There are no believers on the surface of the earth except you and I. This man asked me about you and I have told him that you are my sister, so don&rsquo;t contradict my statement.&rdquo;<cite>Sahih al-Bukhari, 3358</cite></blockquote>
+
+<p>Abraham (peace be upon him) described the entire land he was in as having no believers besides himself and Sarah &mdash; a general, outward judgement of the land as a whole, in the way Takfir ad-Dar and Takfir bil-Umum work.</p>
+
+<blockquote>They are the ones who persisted in disbelief and hindered you from the Sacred Mosque, preventing the sacrificial animals from reaching their destination. Had there not been believing men and women, unknown to you, you might have trampled them underfoot, incurring guilt for what you did to them unknowingly. That was so Allah may admit into His mercy whoever He wills. Had those unknown believers stood apart, We would have certainly inflicted a painful punishment on the disbelievers.<cite>Quran 48:25</cite></blockquote>
+
+<p>Here, Allah describes the whole of Mecca&rsquo;s people, before the conquest, as persisting in disbelief &mdash; a general Takfir of the land and its people &mdash; even though there were secret believers hidden among them, unknown to the Muslims. The existence of unknown individual exceptions did not stop the general, outward ruling on the land as a whole from being correct.</p>
+
+<h2>Verifying Islam before treating someone as Muslim</h2>
+
+<p>To be clear, this in-depth verification is about lands and groups where Kufr is the majority. In such places, even people who claim Islam, who pray, who give you Salam &mdash; until you verify their Islam, you should not treat them as a Muslim.</p>
+
+<h2>Congregational prayer in non-Muslim lands</h2>
+
+<p>In the land of the non-Muslims specifically, congregational prayer and Salah in mosques is no longer an obligation.</p>
+
+<p>You must be careful with such matters. Never pray with others in this case unless you verify their Islam &mdash; whether it is the Imam, or the people standing with you.</p>
+
+<h2>Takfir on a personal and legal level</h2>
+
+<p>Takfir can also be done on a personal level and on a legal level.</p>
+
+<p>If you live in Dar al-Islam, theoretically, if you see someone commit Kufr, you must report it and make Takfir of him on a personal level. But he may still retain some of the rights of a Muslim under the state, until a judge (Qadi) issues an official state Takfir on him, and he may then be charged with apostasy.</p>
+
+<h2>Jumu&rsquo;ah (Friday prayer) in Kufr lands</h2>
+
+<p>Jumu&rsquo;ah is only established in a legitimate Islamic Caliphate, where Muslims are in authority and where Shariah is practiced.</p>
+
+<p><strong>Why?</strong> Because Jumu&rsquo;ah is a prayer of safety and freedom.</p>
+
+<p>We cannot pray Jumu&rsquo;ah in Kufr land, because the Kuffar would prevent or fight us &mdash; thus the obligation for Jumu&rsquo;ah is removed due to incapability to observe it.</p>
+
+<p>If one wants the evidence, it is the Sunnah of the Prophet. He did not pray Jumu&rsquo;ah in Mecca, yet it was obligated upon him in Medina.</p>
+
+<h3>Imam Malik&rsquo;s exception</h3>
+
+<p>Imam Malik (may Allah have mercy on him) made an exception to the prohibition of praying behind a Kafir Imam under certain circumstances:</p>
+
+<p class="ar" dir="rtl" lang="ar">وسألت مالكاً عن الصلاة خلف الإمام القدري؟ قال: إن استيقنت أنه قدري فلا تصل خلفه. قال: قلت: ولا الجمعة؟ قال: ولا الجمعة إن استيقنت. قال: وأرى إن كنت تتقيه وتخافه على نفسك أن تصلي معه وتعيدها ظهراً.</p>
+
+<blockquote>I asked Malik about praying behind a Qadari Imam. He said: &ldquo;If you are asked for a ruling, then say: do not pray behind him.&rdquo; The questioner asked: &ldquo;Not even the Friday prayer?&rdquo; Imam Malik (may Allah have mercy on him) replied: &ldquo;Not even the Friday prayer. But if you fear him, then pray with him, and repeat the prayer at home as Dhuhr.&rdquo;<cite>Al-Mudawwana, p. 177</cite></blockquote>
+
+<h3>Ibn Rajab al-Hanbali&rsquo;s explanation</h3>
+
+<blockquote>Therefore, Ahmad explicitly stated &mdash; in the narration of Abu Talib &mdash; that the Prophet &#xFDFA; commanded Mus&rsquo;ab bin Umayr to lead them in the Friday congregational prayer in Medina. Ahmad also stated that the first Friday prayer held in Islam was the one in Medina with Mus&rsquo;ab bin Umayr. A similar report was previously mentioned on the authority of &lsquo;Ata&rsquo; and al-Awza&rsquo;i. Thus, it becomes clear that the Prophet &#xFDFA; commanded the establishment of the Friday prayer in Medina but did not establish it in Mecca; this indicates that the Friday prayer had already been made obligatory upon him in Mecca. Among those who held that the Friday prayer was made obligatory in Mecca before the Hijrah are: Abu Hamid al-Isfara&rsquo;ini from the Shafi&rsquo;is; al-Qadi Abu Ya&rsquo;la in Khilaf al-Kabir (from our [Hanbali] companions); Ibn &lsquo;Aqil in &lsquo;Umad al-Adilla; and it was likewise mentioned by a group of Malikis, including al-Suhayli and others.</blockquote>
+
+<blockquote>As for the fact that he [the Prophet] did not perform it in Mecca, this is understood to mean that he was only commanded to establish it in an Abode of Migration (Dar al-Hijrah), not in an Abode of War (Dar al-Harb). Mecca at that time was an Abode of War; the Muslims were unable to openly manifest their religion therein and feared for their lives. For this reason, they migrated from it to Medina. The Friday prayer is waived for numerous excuses, including fear for one&rsquo;s life or property. Some later Shafi&rsquo;i scholars alluded to another reason for the abstention from establishing it in Mecca: that the objective of establishing the Friday prayer is to manifest the hallmark (Izhar al-Shi&rsquo;ar) of Islam, which can only be achieved in an Abode of Islam (Dar al-Islam). For this reason, the Friday prayer is not established in prison, even if there are forty [eligible] congregants within it. There is no known scholarly disagreement on this point. Among those who held this view are: al-Hasan [al-Basri], Ibn Sirin, al-Nakha&rsquo;i, al-Thawri, Malik, Ahmad, Ishaq, and others.<cite>Fath al-Bari, 8/66&ndash;67</cite></blockquote>
+
+<h3>Conclusions</h3>
+
+<p>Refusing to observe Jumu&rsquo;ah in such circumstances is not a &ldquo;neglect of Fard,&rdquo; but following the Sunnah of the Prophet &#xFDFA; during a period when Islam has no power on earth.</p>
+
+<p>We see a clear distinction between conditions depending on the status of the territory:</p>
+
+<ul>
+  <li><strong>Medina:</strong> There is territory, there is authority, there is the possibility of Izhar al-Din (open proclamation of religion as law). Result: Jumu&rsquo;ah is held.</li>
+  <li><strong>Mecca:</strong> There are Muslims, there is a Prophet, and the order for Jumu&rsquo;ah exists. But the territory is hostile (Dar al-Harb), there is no supremacy of Islam, and there is no security. Result: Jumu&rsquo;ah is not held.</li>
+</ul>
+
+<p>Consequently, the performance of Jumu&rsquo;ah is inextricably linked to the status of the territory, and the ability to openly &mdash; without fear or humiliation &mdash; declare the symbols of Islam. If these conditions are absent, as in most countries of modern Dar al-Kufr, then we are in the &ldquo;Meccan period&rdquo; with regard to this Hukm.</p>
+
+<blockquote>The five daily prayers are valid behind anyone you pray with, unless he is a Kafir. If you prayed behind him, then repeat your prayer. And if your Friday prayer leader is a Jahmi and he is a ruler, then pray behind him but repeat your prayer. But if your Imam, whether from the rulers or others, is a person of Sunnah, then pray behind him and do not repeat your prayer.<cite>Abu Muhammad Al-Barbahari (d. 329 AH), Sharh as-Sunnah, 114</cite></blockquote>
+`,
+"what-is-islam/aqeedah/nawaqidul-islam": `
+<p>Nullifiers of Islam are things that remove a person from Islam &mdash; committing one means a person has fallen into Major Kufr, and needs to come back to Islam.</p>
+
+<p>You might not understand some of these nullifiers at first glance; the specifics behind each are explained in their own dedicated pages elsewhere on this site, so feel free to go back and read further.</p>
+
+<p>Below is a list of the nullifiers of Islam. Nullifiers usually come down to having a deficiency in Aqeedah, or committing an act of disbelief:</p>
+
+<h3>1. Shirk (Polytheism &amp; Associating Partners with Allah)</h3>
+
+<p>All forms of Kufr are technically Shirk, but worshiping or believing in the divinity of anything other than Allah is Major Kufr on its own. Within Shirk, you also have things like:</p>
+
+<ul>
+<li><strong>Istihlal (Permitting the Forbidden or Forbidding the Permitted):</strong> Declaring explicitly forbidden matters (like Riba, Zina, alcohol, or murder) to be halal, or declaring explicitly permitted matters to be haram. If the ruling is something known by mass transmission, then denying it is Kufr immediately; for obscure matters, it becomes Kufr after proof (Hujjah) is established upon the person who does it. Istihlal denies Allah&rsquo;s exclusive authority as the Lawgiver (Al-Hakim).</li>
+<li><strong>Legislating Laws Outside of Revelation (Tashri&lsquo;):</strong> Writing, enacting, or implementing man-made legal codes, secular constitutions, or civil laws to replace or exist alongside the Shariah.</li>
+<li><strong>Believing Shariah is Inferior or Outdated:</strong> Viewing man-made legal systems, secularism, or modern ideologies as superior, equal, or more suitable for society than Islamic law.</li>
+<li><strong>Taking Non-Shariah Sources as Hujjah / Uncritical Taqlid:</strong> Treating human philosophies, personal opinions, or blind imitation (Taqlid) as binding authority over explicit scripture in fundamental creed (Aqeedah) or clear Fiqh rulings.</li>
+<li><strong>Believing One to Be Exempt from the Shariah.</strong></li>
+<li><strong>Love for Kufr:</strong> Preferring disbelief over belief; taking joy in the spread of disbelief; wishing that societies abandon Islam for secularism or idolatry, or preferring other religions over Islam in any way.</li>
+</ul>
+
+<p>All of these things imply that Allah made an error, or that something other than Him is superior, so it is Shirk &mdash; it violates belief in Tawhid.</p>
+
+<h3>2. Deficiency in Aqeedah</h3>
+
+<p>This includes things like:</p>
+
+<ul>
+<li>Not having the right sect (not being Sunni, not affirming the Athari creed, not being a Salafi).</li>
+<li>Not knowing and affirming the correct Aqeedah (Tawhid, Kufr, Shirk, the Pillars, how to apply Takfir, Udhr and Hujjah properly, Al Wala wal Bara, Kufr bi Taghut wa Iman Billah, not affirming the soul and Fitrah), or being a <a href="#/forum/refutations/heretics">heretic</a> who believes something other than the correct Aqeedah.</li>
+<li>Not making Takfir of Kuffar, which includes not applying Takfir bil &lsquo;Umum, Takfir ad-Dar, or not applying Udhr bil Jahil and Iqamatul Hujjah correctly, etc.</li>
+<li>Denying a nullifier of Islam &mdash; which is itself a nullifier of Islam.</li>
+</ul>
+
+<p><strong>Quick note:</strong> in Islam, if an issue is mass transmitted/attested or is known by Fitrah, then not affirming it is disbelief. For things known only through studying the texts, it becomes disbelief only after Hujjah is established. And if someone has committed disbelief in this world while having absolutely no access to Islam at all, Allah may test that person on the Day of Judgment &mdash; this is outlined elsewhere on this site.</p>
+
+<h3>3. Sorcery (Sihr / Black Magic / Witchcraft)</h3>
+
+<p>Practicing black magic; summoning or serving jinn and demons; performing rituals at the command of evil spirits; learning, teaching, or distributing books of magic.</p>
+
+<blockquote>&ldquo;They followed [instead] what the devils had recited during the reign of Solomon. It was not Solomon who disbelieved, but the devils disbelieved, teaching people magic...&rdquo;<cite>Surah Al-Baqarah, 2:102</cite></blockquote>
+
+<h3>4. Rejecting Any Part of Revelation</h3>
+
+<p>Denying a single verse, word, or letter of the Qur&rsquo;an; rejecting established, authentic Sunnah; picking and choosing commands while rejecting others.</p>
+
+<blockquote>&ldquo;Do you believe in some of the Scripture and reject the rest? Is there any reward for those who do so among you other than disgrace in this worldly life and being subjected to the harshest punishment on the Day of Judgment? For Allah is never unaware of what you do.&rdquo;<cite>Surah Al-Baqarah, 2:85</cite></blockquote>
+
+<p>Denying even a single letter accuses Allah of falsehood or error, violating the obligation of complete submission.</p>
+
+<h3>5. Alliance with Disbelievers (Muwalat)</h3>
+
+<p>Aiding, funding, or joining non-Muslim forces, spying for non-Muslim states, or supporting military efforts to conquer Muslim lands.</p>
+
+<h3>6. Hatred of Islam, Its Rulings, or the Companions (Sahabah)</h3>
+
+<p>Despising any divine law (such as inheritance, hijab, or punishment codes); detesting the Prophet (&#xFDFA;) or his companions who preserved the faith.</p>
+
+<blockquote>&ldquo;That is because they disliked what Allah revealed, so He rendered worthless their deeds.&rdquo;<cite>Surah Muhammad, 47:9</cite></blockquote>
+
+<p>Internal hatred of divine revelation nullifies faith. This includes <strong>desecration of Islamic symbols</strong> &mdash; such as throwing the Qur&rsquo;an into filth, defiling mosques, or intentionally disrespecting sacred texts with malice or contempt. It is an explicit physical manifestation of hatred and contempt toward Allah and His word, destroying the required reverence (Ta&rsquo;dhim) for faith.</p>
+
+<h3>7. Mocking Islam (Istihza&rsquo;)</h3>
+
+<p>Making jokes about Allah, the Qur&rsquo;an, prophets, Islamic symbols (such as the beard or hijab), or rituals &mdash; even if done humorously or casually. Expressing mockery toward sacred truths destroys reverence for Allah.</p>
+
+<blockquote>&ldquo;Make no excuse; you have disbelieved after your belief.&rdquo;<cite>Surah At-Tawbah, 9:65&ndash;66</cite></blockquote>
+
+<h3>8. Not Abandoning Kufr and Its Spaces</h3>
+
+<p>Such as:</p>
+
+<ul>
+<li>Remaining seated in gatherings where Islam is mocked, without objecting or leaving.</li>
+<li>Owning, buying, selling, or playing video games and media containing Shirk or blasphemy.</li>
+<li>Possessing idols without destroying them.</li>
+</ul>
+
+<p>Remaining willingly present during active disbelief without denial implies approval.</p>
+
+<blockquote>&ldquo;If you sit with them, indeed you would then be like them.&rdquo;<cite>Surah An-Nisa, 4:140</cite></blockquote>
+
+<p>The severity of failing to object to evil is established directly in the Sunnah:</p>
+
+<blockquote>Rasulullah (&#xFDFA;) said: &ldquo;Allah Ta&rsquo;ala instructed an angel to destroy a particular city. The angel said: &lsquo;Indeed therein is a certain slave of Yours who has not disobeyed You even for the blink of an eye.&rsquo; Allah Ta&rsquo;ala replied: &lsquo;Destroy him and them, for he didn&rsquo;t frown [at their disobedience] for My sake ever.&rsquo;&rdquo;<cite>Al-Mu&rsquo;jam al-Awsat (Tabarani), 7661; Shu&rsquo;ab al-Iman (Bayhaqi), 7189; Al-Firdaws (Daylami), 519 &mdash; see also Majma&rsquo; az-Zawa&rsquo;id, vol. 7, pg. 270</cite></blockquote>
+
+<blockquote>Abu Sa&rsquo;eed al-Khudri (radiyallahu &rsquo;anhu) said: I heard the Messenger of Allah (&#xFDFA;) say, &ldquo;Whoever of you sees an evil must then change it with his hand. If he is not able to do so, then with his tongue. And if he is not able to do so, then with his heart &mdash; and that is the weakest [level] of faith.&rdquo;<cite>Sahih Muslim</cite></blockquote>
+
+<p>The man in the first hadith was destroyed along with the sinners despite his own personal obedience, simply because he never showed disapproval toward their sin &mdash; he never even frowned at it. If this is the severity attached to staying silent on ordinary sin, then consider how much graver it is regarding Shirk and Kufr. The bare minimum obligation is to abandon such gatherings and hate what occurs in them in one&rsquo;s heart; but if one is able to actually change or stop it &mdash; with the hand or the tongue &mdash; then the obligation rises accordingly, and falling short of it becomes correspondingly more severe.</p>
+
+<h3>9. Failing to Do Any Pillar</h3>
+
+<p>Like:</p>
+
+<ul>
+<li>Abandoning the prayer (Tark al-Salah), or any pillar of Islam &mdash; Hajj, Sawm, Zakat.</li>
+<li>Not upholding any pillar of Iman.</li>
+<li>Not fulfilling the pillar of Ihsan (even simply believing Allah sees you fulfills this pillar).</li>
+</ul>
+
+<p>Here&rsquo;s proof:</p>
+
+<blockquote>Jabir reported: The Prophet, peace and blessings be upon him, said, &ldquo;Verily, between a man and idolatry and unbelief is abandoning the prayer.&rdquo;<cite>Sahih Muslim</cite></blockquote>
+
+<blockquote>Abu Bakr said: &ldquo;By Allah! I will fight those who differentiate between the prayer and the Zakat, as Zakat is the compulsory right to be taken from the property. By Allah! If they refuse to pay me even a she-kid which they used to pay at the time of Allah&rsquo;s Messenger (&#xFDFA;), I would fight with them for withholding it.&rdquo; Then &lsquo;Umar said, &ldquo;By Allah, it was nothing but Allah opened Abu Bakr&rsquo;s chest towards the decision [to fight], and I came to know that his decision was right.&rdquo;<cite>Sahih al-Bukhari</cite></blockquote>
+
+<blockquote>It is narrated on the authority of &lsquo;Abdullah son of &lsquo;Umar that the Messenger of Allah (&#xFDFA;) said: (The superstructure of) al-Islam is raised on five (pillars): testifying that there is no god but Allah and that Muhammad is His bondsman and messenger, the establishment of prayer, payment of Zakat, pilgrimage to the House (Ka&rsquo;ba), and the fast of Ramadan.<cite>Sahih Muslim</cite></blockquote>
+
+<blockquote>Al-Hakam ibn &lsquo;Uthaybah said: &ldquo;Whoever deliberately neglects prayer has committed Kufr; whoever deliberately neglects Zakat has committed Kufr; whoever deliberately neglects Hajj has committed Kufr; and whoever deliberately neglects fasting in Ramadan has committed Kufr.&rdquo;</blockquote>
+
+<blockquote>Sa&lsquo;id ibn Jubayr said: &ldquo;Whoever deliberately neglects prayer has committed Kufr against Allah; whoever deliberately neglects Zakat has committed Kufr against Allah; and whoever deliberately neglects fasting in Ramadan has committed Kufr against Allah.&rdquo;</blockquote>
+
+<blockquote>Al-Dhahhak said: &ldquo;Prayer is not accepted except with Zakat.&rdquo;</blockquote>
+
+<blockquote>&lsquo;Abdullah ibn Mas&lsquo;ud said: &ldquo;Whoever performs prayer but does not pay Zakat has no prayer.&rdquo;<cite>Narrated by Asad ibn Musa</cite></blockquote>
+
+<blockquote>&lsquo;Abdullah ibn &lsquo;Amr said: &ldquo;Whoever drinks alcohol in the evening becomes a polytheist, and whoever drinks it in the morning becomes a polytheist by evening.&rdquo; It was said to Ibrahim al-Nakha&lsquo;i: &ldquo;How is that?&rdquo; He replied: &ldquo;Because he abandons prayer.&rdquo;</blockquote>
+
+<p>And of course, the proof for the pillars of Iman and Ihsan being Kufr to abandon is common sense &mdash; if you don&rsquo;t believe Allah sees you, then you are a Kaafir; if you don&rsquo;t believe in Allah, the angels, the prophets, etc., the ruling is the same. If you have a valid reason not to do one of the pillars of Islam, then you are free of blame.</p>
+
+<h3>10. Turning Away Completely from Islam (I&rsquo;rad)</h3>
+
+<p>Total apathy toward religion, refusing to learn its basic duties, ignoring divine commands, and living without care for belief or practice.</p>
+
+<blockquote>&ldquo;And who is more unjust than one who is reminded of the verses of his Lord; then he turns away from them?&rdquo;<cite>Surah As-Sajdah, 32:22</cite></blockquote>
+
+<p>Complete disregard for revelation reflects a total absence of faith.</p>
+
+<h3>11. Abandoning the Obligation of Dawah</h3>
+
+<p>Completely giving up the duty of inviting people to Islam, concealing divine truth, and abandoning commanding good and forbidding evil (Amr bil-Ma&rsquo;ruf wa Nahy &lsquo;anil-Munkar). Total abandonment of Dawah is viewed as concealing revelation (Kitman al-&lsquo;Ilm) and allowing disbelief to triumph unchecked, which contradicts the prophetic purpose.</p>
+
+<h3>12. Practicing Festivals or Religions of Non-Muslims</h3>
+
+<p>Celebrating holidays like Christmas, Halloween, or New Year&rsquo;s; wearing non-Muslim religious symbols; partaking in their rites, etc. These celebrations stem directly from underlying theological creeds (Aqeedah), so participating in them constitutes imitation (Tashabbuh) and endorsement of rites built on disbelief. There are only two official festivals in Islam &mdash; the two Eids.</p>
+
+<h3>13. Depicting Prophets in Images or Art, or Trying to Depict Allah</h3>
+
+<p>Visual depictions strip prophets of the unique sanctity and reverence (Ta&rsquo;dhim) owed to them, lower their status to artistic representation, and open the path toward idolatry. Depicting Allah is blasphemous for obvious reasons &mdash; He cannot be grasped, let alone drawn.</p>
+`,
+"what-is-islam/aqeedah/bidah": `
+<h2>Definition of Bid&rsquo;ah</h2>
+
+<p>Linguistically, Bid&rsquo;ah (&#1576;&#1583;&#1593;&#1577;) originates from the root b-d-&lsquo; (&#1576;-&#1583;-&#1593;), meaning to originate, invent, or bring something into existence without prior precedent.</p>
+
+<p>In Islamic theology, Bid&rsquo;ah refers specifically to any invented belief, practice, ritual, or path introduced into the religion (Deen) as an act of worship aimed at drawing closer to Allah, without backing from the Qur&rsquo;an, Sunnah, or the consensus of the Prophet&rsquo;s Companions (Sahabah).</p>
+
+<h3>Scriptural Foundations</h3>
+
+<p>The prohibition of Bid&rsquo;ah is grounded in direct textual warnings:</p>
+
+<blockquote>&ldquo;Whoever introduces into this affair of ours that which is not from it, it will be rejected.&rdquo;<cite>Sahih al-Bukhari, 2697; Sahih Muslim, 1718</cite></blockquote>
+
+<blockquote>&ldquo;Beware of newly invented matters, for every newly invented matter is an innovation, every innovation is misguidance, and every misguidance is in the Fire.&rdquo;<cite>Sunan an-Nasa&rsquo;i, 1578</cite></blockquote>
+
+<h3>The Presumption Behind Bid&rsquo;ah</h3>
+
+<p>Bid&rsquo;ah directly undermines the foundation of divine revelation summarized in the Qur&rsquo;an:</p>
+
+<blockquote>&ldquo;This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as your religion.&rdquo;<cite>Surah Al-Ma&rsquo;idah, 5:3</cite></blockquote>
+
+<p>By adding an invented rite or belief to Islam, an innovator implicitly asserts one of two statements:</p>
+
+<ol>
+<li>The Prophet Muhammad (&#xFDFA;) failed to fully convey the religion, or was unaware of this act of goodness.</li>
+<li>The Shariah left by Allah was incomplete and required human addition to achieve perfection.</li>
+</ol>
+
+<h3>Bid&rsquo;ah in Aqeedah</h3>
+
+<p>Aqeedah (creed) governs the core tenets of faith, most notably the three branches of Tawhid (Lordship, Worship, and Names &amp; Attributes). Because Aqeedah defines who Allah is and how He must be worshipped, an innovation in Aqeedah directly corrupts Tawhid, crossing into Major Kufr or Major Shirk.</p>
+
+<p>When an innovation alters core creed, it introduces rivals or partners to Allah in His divine attributes or exclusive rights:</p>
+
+<ul>
+<li><strong>Shirk in Worship (Uluhiyyah):</strong> Innovating newly invented rites of intercession &mdash; such as calling upon deceased saints, constructing shrines over graves for spiritual benefit, or seeking help (Istighathah) from created beings &mdash; replaces pure monotheism with polytheism under the guise of &ldquo;devotion.&rdquo;</li>
+<li><strong>Shirk in Legislation (Hukm):</strong> Inventing new theological rules regarding what constitutes belief, salvation, or sacred authority elevates human intellect (Aql) or religious leaders to the level of Lawgiver alongside Allah.</li>
+</ul>
+
+<p>Aqeedah is entirely dependent on divine texts (Tawqifiyyah); human intellect cannot independently determine details of the Unseen (Al-Ghayb). Therefore, introducing an invented belief in Aqeedah requires:</p>
+
+<ul>
+<li>Denying, twisting, or allegorizing plain Qur&rsquo;anic verses (Tahrif / Ta&rsquo;til).</li>
+<li>Rejecting authentic Hadiths that contradict the invented creed.</li>
+<li>Denying divine attributes or creating false attributes for Allah.</li>
+</ul>
+
+<p>Denying or altering explicit revelation regarding the Unseen constitutes Major Kufr through Rejection (Kufr al-Takdhib).</p>
+
+<h3>Bid&rsquo;ah in Practice (Fiqh)</h3>
+
+<p>While innovations in Aqeedah deal with core beliefs, practical or ritual Bid&rsquo;ah deals with invented forms of worship in daily practice &mdash; such as creating specific prayer counts, unscripted group chants, or unlegislated religious days.</p>
+
+<p>Initially, performing a practical innovation out of ignorance or misconception, without denying divine text, is a major sin (Fisq) and severe misguidance, but does not immediately render the person an apostate.</p>
+
+<p>A practical innovation in non-core matters/Fiqh crosses into Major Kufr (disbelief) when proof (Hujjah) from the Qur&rsquo;an and authentic Sunnah is established against the individual &mdash; showing them that their act is an invented falsehood &mdash; and they persist in it anyway.</p>
+
+<p>Persisting after explicit proof means prioritizing human opinion, custom, or personal desire over the clear word of Allah and His Messenger (&#xFDFA;). The individual insists that an unlegislated, prohibited act of Bid&rsquo;ah is righteous, pleasing to Allah, and permissible, effectively overriding divine law. By upholding human innovation over established scripture post-Hujjah, the individual obeys human intellect or authority in opposition to Allah, taking their own desire as an object of worship:</p>
+
+<blockquote>&ldquo;Have you seen he who has taken as his god his [own] desire?&rdquo;<cite>Surah Al-Jathiyah, 45:23</cite></blockquote>
+
+<p><strong>Extremely important note:</strong> Bid&rsquo;ah is only in religious matters &mdash; innovations like cars, microphones, or telephones are not religious matters.</p>
+`,
+"what-is-islam/aqeedah/pillars-of-iman": `
+<p>Iman (faith) is built upon six foundational pillars. These were laid out explicitly by the Prophet (&#xFDFA;) himself in the famous Hadith of Jibril, where the angel Jibril (Gabriel), in the form of a man, questioned the Prophet (&#xFDFA;) in front of the Companions:</p>
+
+<blockquote>&lsquo;Umar ibn al-Khattab (radiyallahu &rsquo;anhu) narrated: &hellip; He said, &ldquo;Tell me about Iman.&rdquo; He (the Prophet) said, &ldquo;It is that you believe in Allah, His angels, His books, His messengers, the Last Day, and that you believe in Al-Qadar (divine decree), the good of it and the bad of it.&rdquo; He said, &ldquo;You have spoken truly.&rdquo;<cite>Sahih Muslim, 8</cite></blockquote>
+
+<p>As established on the <a href="#/forum/what-is-islam/aqeedah/kufr-and-shirk">Kufr and Shirk</a> page, Iman is not merely internal conviction &mdash; it consists of belief in the heart, speech of the tongue, and action of the limbs. The six pillars below form the belief component that anchors all of it.</p>
+
+<h3>1. Belief in Allah</h3>
+
+<p>Affirming Allah&rsquo;s existence and His exclusive right to Lordship (Rububiyyah), Worship (Uluhiyyah), and His Names and Attributes (Asma&rsquo; wa-s-Sifat) &mdash; the three branches of Tawhid covered in detail on the <a href="#/forum/what-is-islam/aqeedah/tawhid">Tawhid</a> page. This is the foundation every other pillar rests on; a corruption here is what constitutes Shirk or Kufr as explained on the <a href="#/forum/what-is-islam/aqeedah/nawaqidul-islam">Nawaqidul-Islam</a> page.</p>
+
+<blockquote>&ldquo;Allah &mdash; there is no deity except Him, the Ever-Living, the Sustainer of [all] existence.&rdquo;<cite>Surah Al-Baqarah, 2:255</cite></blockquote>
+
+<h3>2. Belief in His Angels</h3>
+
+<p>Affirming that the angels exist as real created beings of light who never disobey Allah, and carry out the tasks He assigns them &mdash; such as Jibril, who delivered revelation, and the angels who record deeds.</p>
+
+<blockquote>&ldquo;The Messenger has believed in what was revealed to him from his Lord, and [so have] the believers. All of them have believed in Allah and His angels and His books and His messengers.&rdquo;<cite>Surah Al-Baqarah, 2:285</cite></blockquote>
+
+<h3>3. Belief in His Books</h3>
+
+<p>Affirming that Allah revealed scriptures to His messengers &mdash; including the Tawrah, the Zabur, the Injil, and finally the Qur&rsquo;an, which abrogates and preserves what came before it, and is the only one of these that remains unaltered.</p>
+
+<blockquote>&ldquo;Indeed, it is We who sent down the Qur&rsquo;an and indeed, We will be its guardian.&rdquo;<cite>Surah Al-Hijr, 15:9</cite></blockquote>
+
+<h3>4. Belief in His Messengers</h3>
+
+<p>Affirming every prophet and messenger Allah sent, from Adam to Muhammad (&#xFDFA;), the last and final of them, without making distinctions that reject any of them &mdash; rejecting a single one is rejecting them all, since they all called to the same Tawhid.</p>
+
+<blockquote>&ldquo;The Messenger has believed &hellip; &lsquo;We make no distinction between any of His messengers.&rsquo;&rdquo;<cite>Surah Al-Baqarah, 2:285</cite></blockquote>
+
+<h3>5. Belief in the Last Day</h3>
+
+<p>Affirming the reality of death, the punishment and blessing of the grave (Barzakh), the resurrection, the gathering, the reckoning, and the eternal destination of Jannah or the Fire.</p>
+
+<blockquote>&ldquo;And the Hour is coming &mdash; no doubt about it &mdash; and that Allah will resurrect those in the graves.&rdquo;<cite>Surah Al-Hajj, 22:7</cite></blockquote>
+
+<h3>6. Belief in Al-Qadar (Divine Decree)</h3>
+
+<p>Affirming that Allah has decreed all things &mdash; good and bad &mdash; with His prior knowledge, and that nothing occurs outside of His will, while this does not remove a person&rsquo;s own responsibility and choice in their actions.</p>
+
+<blockquote>&ldquo;Indeed, all things We created with predestination.&rdquo;<cite>Surah Al-Qamar, 54:49</cite></blockquote>
+
+<h3>What Denying a Pillar of Iman Means</h3>
+
+<p>As already stated on the <a href="#/forum/what-is-islam/aqeedah/nawaqidul-islam">Nawaqidul-Islam</a> page, not upholding any one of these six pillars is a nullifier of Islam, since it constitutes rejecting a part of what Allah has revealed, which falls under Kufr al-Takdhib (Kufr of denial) explained on the <a href="#/forum/what-is-islam/aqeedah/kufr-and-shirk">Kufr and Shirk</a> page.</p>
+`,
+"what-is-islam/aqeedah/pillars-of-islam": `
+<p>Islam, as an outward structure of submission, is raised upon five pillars. These were defined by the Prophet (&#xFDFA;) himself:</p>
+
+<blockquote>It is narrated on the authority of &lsquo;Abdullah son of &lsquo;Umar that the Messenger of Allah (&#xFDFA;) said: (The superstructure of) al-Islam is raised on five (pillars): testifying that there is no god but Allah and that Muhammad is His bondsman and messenger, the establishment of prayer, payment of Zakat, pilgrimage to the House (Ka&rsquo;ba), and the fast of Ramadan.<cite>Sahih Muslim</cite></blockquote>
+
+<p>This same hadith is cited on the <a href="#/forum/what-is-islam/aqeedah/nawaqidul-islam">Nawaqidul-Islam</a> page, where abandoning any one of these five pillars is established as a nullifier of Islam.</p>
+
+<h3>1. Shahadah (The Testimony of Faith)</h3>
+
+<p>Testifying, with certainty and acceptance, that there is no true god except Allah, and that Muhammad (&#xFDFA;) is His messenger. This is the gateway into Islam &mdash; without it, none of the other pillars have any meaning, since the other four are only accepted from one who has affirmed this first.</p>
+
+<h3>2. Salah (Prayer)</h3>
+
+<p>The five daily prayers, established at their fixed times. As already cited on the Nawaqidul-Islam page, the Prophet (&#xFDFA;) said:</p>
+
+<blockquote>&ldquo;Verily, between a man and idolatry and unbelief is abandoning the prayer.&rdquo;<cite>Sahih Muslim</cite></blockquote>
+
+<h3>3. Zakat (Obligatory Charity)</h3>
+
+<p>A fixed portion given annually from one&rsquo;s wealth to those entitled to it. Abu Bakr (radiyallahu &rsquo;anhu) fought those who refused to pay it, as already quoted on the Nawaqidul-Islam page, treating its abandonment with the same severity as abandoning the prayer.</p>
+
+<h3>4. Sawm (Fasting in Ramadan)</h3>
+
+<p>Abstaining from food, drink, and other invalidators from dawn until sunset throughout the month of Ramadan.</p>
+
+<blockquote>&ldquo;O you who have believed, decreed upon you is fasting as it was decreed upon those before you, that you may become righteous.&rdquo;<cite>Surah Al-Baqarah, 2:183</cite></blockquote>
+
+<h3>5. Hajj (Pilgrimage)</h3>
+
+<p>Performing the pilgrimage to the House of Allah in Makkah at least once in a lifetime, for those who are physically and financially able to do so.</p>
+
+<blockquote>&ldquo;And [due] to Allah from the people is a pilgrimage to the House &mdash; for whoever is able to find thereto a way.&rdquo;<cite>Surah Aal-&rsquo;Imran, 3:97</cite></blockquote>
+
+<h3>Relationship to Iman</h3>
+
+<p>As explained on the <a href="#/forum/what-is-islam/aqeedah/kufr-and-shirk">Kufr and Shirk</a> page, Iman is composed of belief in the heart, speech of the tongue, and action of the limbs. The Pillars of Islam are the primary outward actions that give expression to the inward Pillars of Iman &mdash; belief without this outward submission is incomplete, which is why deliberately abandoning any of these five is treated with the severity already outlined on the <a href="#/forum/what-is-islam/aqeedah/nawaqidul-islam">Nawaqidul-Islam</a> page.</p>
+`,
+"what-is-islam/aqeedah/pillar-of-ihsan": `
+<p>Where Islam concerns outward action and Iman concerns inward belief, Ihsan (excellence) concerns the state of the heart while performing both. It is a single pillar, and its definition comes directly from the same Hadith of Jibril already cited on the <a href="#/forum/what-is-islam/aqeedah/pillars-of-iman">Pillars of Iman</a> page:</p>
+
+<blockquote>He said, &ldquo;Tell me about Ihsan.&rdquo; He (the Prophet, &#xFDFA;) said, &ldquo;It is that you worship Allah as though you see Him, and if you do not see Him, then indeed He sees you.&rdquo;<cite>Sahih Muslim, 8</cite></blockquote>
+
+<h3>The Two Levels of Ihsan</h3>
+
+<p>This single hadith establishes two levels a worshipper can attain:</p>
+
+<ul>
+<li><strong>The higher level (Muraqabatul-Mushahadah):</strong> Worshipping Allah with such presence of heart and certainty that it is as though one can see Him &mdash; a station of the heart, not a literal sight, since Allah cannot be seen in this life.</li>
+<li><strong>The baseline level (Muraqabatul-Ma&rsquo;iyyah):</strong> Knowing and firmly believing that Allah sees you at all times, even if that awareness does not reach the intensity of the first level.</li>
+</ul>
+
+<p>As already stated on the <a href="#/forum/what-is-islam/aqeedah/nawaqidul-islam">Nawaqidul-Islam</a> page, the baseline level is sufficient to fulfill this pillar &mdash; simply believing that Allah sees you, and carrying that belief with sincerity, satisfies the obligation of Ihsan.</p>
+
+<h3>Why Ihsan Matters</h3>
+
+<p>Ihsan is what separates sincere worship from hollow ritual. The Pillars of Islam give the outward form and the Pillars of Iman give the inward conviction, but Ihsan is the quality of consciousness that ties the two together &mdash; without it, acts of worship risk becoming performed for show (Riya&rsquo;), which is a form of Minor Shirk as explained on the <a href="#/forum/what-is-islam/aqeedah/kufr-and-shirk">Kufr and Shirk</a> page.</p>
 `,
 "what-is-islam/how-to-be-muslim/know-islam-and-believe-islam-is-true": `
 <blockquote>&ldquo;Indeed, the religion in the sight of Allah is Islam.&rdquo;<cite>Quran 3:19</cite></blockquote>
@@ -949,7 +1493,7 @@ const CONTENT = {
 <p>The Prophet &#xFDFA; said:</p>
 <blockquote>&ldquo;There is none who testifies sincerely that none has the right to be worshipped but Allah and Muhammad is his Apostle, except that Allah will save him from the Hell-fire.&rdquo;<cite>Sahih al-Bukhari, 128</cite></blockquote>
 
-<p>This means anyone who sincerely believes in Allah and his Messenger &#xFDFA; and testifies such will be saved. But keep in mind, this does not mean Aqeedah isn&rsquo;t essential &mdash; there is no belief without the proper form of that belief. It is not even considered belief to affirm Islam without the correct Aqeedah.</p>
+<p>This means anyone who sincerely believes in Allah and His Messenger &#xFDFA; and testifies such will be saved. But keep in mind, this does not mean Aqeedah isn&rsquo;t essential &mdash; there is no belief without the proper form of that belief. It is not even considered belief to affirm Islam without the correct Aqeedah.</p>
 `,
 "what-is-islam/how-to-be-muslim/avoid-every-nullifier-of-islam-nawaqid-al-islam": `
 <p>Here are all of them outlined &mdash; this is extremely important. If you want to stay Muslim then you must avoid the nullifiers of Islam: things that make you a non-Muslim even if your intention wasn&rsquo;t to leave Islam.</p>
@@ -1390,7 +1934,7 @@ A brilliant channel focused on breaking down Arabic grammar, vocabulary, and Qur
 </ol>
 <p><strong>Conclusion:</strong> Dai is mortal.</p>
 
-<p>This conclusion isn&rsquo;t optional, it&rsquo;s <em>necessary</em>. It&rsquo;s forced by the rules themselves: Dai is a human (that&rsquo;s just what he is), humans are mortal (also just what they are), so Dai must be mortal. The only way out would be for Dai to somehow be mortal and not mortal at the same time &mdash; and that breaks the rule that a thing can&rsquo;t be both true and false at once. So the conclusion is locked in.</p>
+<p>This conclusion isn&rsquo;t optional; it&rsquo;s <em>necessary</em>. It&rsquo;s forced by the rules themselves: Dai is a human (that&rsquo;s just what he is), humans are mortal (also just what they are), so Dai must be mortal. The only way out would be for Dai to somehow be mortal and not mortal at the same time &mdash; and that breaks the rule that a thing can&rsquo;t be both true and false at once. So the conclusion is locked in.</p>
 `,
 "why-islam-is-true/principles-to-understand/existence-and-essence": `
 <p class="lede">You&rsquo;ll often see the words <em>Thing</em>, <em>Existent</em>, <em>Essence</em>, <em>Being</em>, and <em>Reality</em> used throughout this site. Here&rsquo;s what they actually mean.</p>
@@ -1538,7 +2082,7 @@ A brilliant channel focused on breaking down Arabic grammar, vocabulary, and Qur
   <li>X cannot be Y and Not Y (Law of Non-Contradiction)</li>
 </ul>
 
-<p>These laws are not inventions of the mind, they are reflections of reality. To deny classical logic is to deny rational discourse &mdash; the attempt to reject logic presupposes the very structure it tries to negate. Logic does not float in a void. When we use logic, we are not merely manipulating empty symbols; it describes how objects behave in thought and in reality. When we say &ldquo;A is B,&rdquo; we are making a predication, attributing a property B to an object.</p>
+<p>These laws are not inventions of the mind; they are reflections of reality. To deny classical logic is to deny rational discourse &mdash; the attempt to reject logic presupposes the very structure it tries to negate. Logic does not float in a void. When we use logic, we are not merely manipulating empty symbols; it describes how objects behave in thought and in reality. When we say &ldquo;A is B,&rdquo; we are making a predication, attributing a property B to an object.</p>
 
 <h2>Objects of predication</h2>
 
