@@ -320,6 +320,25 @@ main{ max-width:1080px; margin:0 auto; padding: clamp(2rem,5vw,4rem) clamp(1.25r
   border:0; border-top:1px solid var(--line); margin:2.2rem 0;
 }
 
+.article .warning{
+  --warn:#A61E1E;
+  margin:0 0 2.2rem; padding:1.4rem 1.5rem 1.5rem;
+  border:3px solid var(--warn); border-radius:10px;
+  background:rgba(166,30,30,.09);
+}
+.article .warning-title{
+  display:flex; align-items:center; gap:.6rem; margin:0 0 .75rem;
+  font-size:1.05rem; font-weight:700; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--warn);
+}
+.article .warning p{
+  margin:0; font-size:1.3rem; line-height:1.55; font-weight:700; color:var(--ink);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .article .warning{ --warn:#E8746A; background:rgba(232,116,106,.12); }
+}
+:root[data-theme="dark"] .article .warning{ --warn:#E8746A; background:rgba(232,116,106,.12); }
+
 .back-link{
   display:inline-flex; align-items:center; gap:.4rem;
   margin-top:2.4rem; font-size:.9rem; color:var(--gold-2);
@@ -373,6 +392,7 @@ const FORUMS = [
             ["List of Good and Bad Deeds",""]
           ]],
           ["Special Religious Places on Earth",""],
+          ["Isnaad and Hadith Science","A beginner's guide to chains of narration and how hadith are verified."],
           ["Dar, War, Taghut and Caliphates","",[
             ["Dar al Islam and Dar al Harb",""],
             ["War",""],
@@ -407,7 +427,7 @@ const FORUMS = [
             ["Hygiene","Cleanliness, fitrah, and everyday personal care in Islam."]
         ]],
         ["Fatwas","Rulings on specific matters of daily life and practice.",[
-          ["Tasweer",""],
+          ["Tasweer","The ruling on drawings, photography and digital images, according to the Maliki school."],
           ["Awrah",""],
           ["Mahrams",""],
           ["Combining salah",""],
@@ -1611,6 +1631,70 @@ const CONTENT = {
 
 <p>The believer&rsquo;s focus is not to escape difficulty in this world, but to remain patient, grateful, and obedient through it, knowing that the real, lasting life is the one that comes after.</p>
 `,
+"what-is-islam/aqeedah/specific-beliefs/isnaad-and-hadith-science": `
+<p class="lede">Almost everything we know about how the Prophet &#xFDFA; prayed, fasted and lived comes to us through hadith. Muslims built a whole science to check that these reports are authentic. This page explains it from scratch.</p>
+
+<h2>What is a hadith?</h2>
+
+<p>A hadith is a report of something the Prophet &#xFDFA; said, did, or approved of. Every hadith has two parts:</p>
+
+<ul>
+  <li><strong>The Isnaad (chain of narration):</strong> the list of people who passed the report down, one after another, from the Prophet &#xFDFA; to the scholar who wrote it in his book.</li>
+  <li><strong>The Matn (text):</strong> the actual words or description being reported.</li>
+</ul>
+
+<p>Think of it like a news report that names its sources: &ldquo;A told me, who heard it from B, who heard it from C, who saw it happen.&rdquo; A well-known example is the chain Malik &rarr; Nafi&lsquo; &rarr; Ibn &lsquo;Umar &rarr; the Prophet &#xFDFA;, which scholars nicknamed the &ldquo;golden chain&rdquo; because of how reliable each link was.</p>
+
+<h2>Why do chains matter?</h2>
+
+<p>Early scholars such as &lsquo;Abdullah ibn al-Mubarak said that the isnaad is part of the religion itself, because without it anyone could claim anything about the Prophet &#xFDFA;. After the first generation, false reports began to appear because of politics, sectarian fighting and storytellers. Scholars responded by asking every narrator the same question: <em>who told you this?</em> A report without a chain was simply not accepted.</p>
+
+<h2>How is a chain verified?</h2>
+
+<p>Scholars later summarised the conditions for an authentic (Sahih) hadith as five points:</p>
+
+<ol>
+  <li><strong>Connected chain (ittisal):</strong> every narrator actually heard it from the one before him, with no missing link.</li>
+  <li><strong>Upright narrators (&lsquo;adalah):</strong> each one is known as a Muslim of good character who does not lie.</li>
+  <li><strong>Accurate memory or record (dabt):</strong> each one is careful and reliable in passing on what he heard, whether from memory or from a written book.</li>
+  <li><strong>No shudhudh (irregularity):</strong> the report does not contradict what more reliable narrators reported.</li>
+  <li><strong>No hidden defect (&lsquo;illah):</strong> after close study by experts, no concealed flaw is found in the chain or text.</li>
+</ol>
+
+<h2>The science of narrators (&lsquo;Ilm al-Rijal)</h2>
+
+<p>To check these conditions, scholars recorded the biographies of thousands of narrators: when and where they lived, who they studied under, who studied under them, and how trustworthy or careful they were. This lets a scholar test simple but powerful questions, such as whether two narrators lived in the same era and city, so that they could actually have met.</p>
+
+<p>The study of judging narrators is called <strong>al-Jarh wa al-Ta&lsquo;dil</strong> (criticism and praise). A narrator might be declared trustworthy, honest but weak in memory, or a known liar, and his reports are treated accordingly.</p>
+
+<h2>Checking the text as well</h2>
+
+<p>Scholars also compared the different narrations of the same hadith, looked for differences in wording, and checked whether the meaning agreed with the Qur&rsquo;an and with other well-established reports. A hadith could have a chain that looks fine on paper and still be rejected if experts found a hidden flaw in it.</p>
+
+<h2>Grades of hadith</h2>
+
+<ul>
+  <li><strong>Sahih (authentic):</strong> meets all five conditions above.</li>
+  <li><strong>Hasan (good):</strong> meets the conditions, except that a narrator&rsquo;s accuracy is slightly lower.</li>
+  <li><strong>Da&lsquo;if (weak):</strong> fails one or more conditions, for example a missing link or a narrator with poor memory.</li>
+  <li><strong>Mawdu&lsquo; (fabricated):</strong> invented and falsely attributed to the Prophet &#xFDFA;. It is rejected entirely.</li>
+</ul>
+
+<p>Separately, a hadith reported by so many people in every generation that they could not have agreed on a lie is called <strong>Mutawatir</strong>. A hadith with fewer narrators is called <strong>Ahad</strong>. Most hadith are Ahad.</p>
+
+<h2>The famous collections</h2>
+
+<p>Imam al-Bukhari (d. 256 AH) and Imam Muslim (d. 261 AH) each compiled a collection containing only the reports they judged Sahih, and these two are considered the most reliable books after the Qur&rsquo;an. Other major works are the Sunan of Abu Dawud, al-Tirmidhi, al-Nasa&rsquo;i and Ibn Majah, and the Muwatta of Imam Malik. Unlike the two Sahih books, these include reports of varying grades, so scholars grade them individually.</p>
+
+<h2>Common misconceptions</h2>
+
+<ul>
+  <li><strong>&ldquo;Hadith were only written down 200 years later.&rdquo;</strong> Some Companions wrote hadith during the Prophet&rsquo;s &#xFDFA; lifetime, such as &lsquo;Abdullah ibn &lsquo;Amr, and their students kept written notebooks. The large collections came later, but they gathered material that was already being taught and written.</li>
+  <li><strong>&ldquo;The chain proves nothing, anyone could invent one.&rdquo;</strong> This is exactly why scholars investigated the narrators themselves. Fabricators were identified, named and catalogued in dedicated books.</li>
+</ul>
+
+<p>Scholars can sometimes differ on the grading of a particular hadith, since it takes judgement about narrators and hidden defects. For a beginner, the safe starting point is the Sahih collections and trusted scholars who explain the gradings.</p>
+`,
 "what-is-islam/aqeedah/specific-beliefs/the-akhirah": `
 <p class="lede">Belief in the Akhirah (the Afterlife) is known by necessity. It is implied by the fifth pillar of Iman: believing in the Last Day, also called Judgement Day.</p>
 
@@ -2415,6 +2499,14 @@ const CONTENT = {
 <blockquote>&ldquo;Allah does not burden a soul beyond that which it can bear. All good will be for its own benefit, and all evil will be to its own loss. &lsquo;Our Lord! Do not punish us if we forget or make a mistake. Our Lord! Do not place a burden on us like the one you placed on those before us. Our Lord! Do not burden us with what we cannot bear. Pardon us, forgive us, and have mercy on us. You are our only Guardian. So grant us victory over the disbelieving people.&rsquo;&rdquo;<cite>Surah Al-Baqarah, 2:286</cite></blockquote>
 `,
 "what-is-islam/importance-of-learning-arabic": `
+<div class="warning" role="alert">
+  <div class="warning-title">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+    Warning
+  </div>
+  <p>Please do not use transliteration to say Arabic words when in acts of worship! Or at least, if you do, be careful! A lot of Arabic sounds are unique and require you to learn basic Arabic. Your acts of worship may be nullified if you do not pronounce things correctly!!!</p>
+</div>
+
 <p class="lede">Before diving into how to learn the language, it is crucial to understand why Arabic holds such an elevated status in Islam. Arabic is not merely a cultural artifact; it is the chosen vessel for Allah’s final revelation to humanity.</p>
 
 <h2>The Importance of Learning Arabic</h2>
@@ -2735,6 +2827,232 @@ A brilliant channel focused on breaking down Arabic grammar, vocabulary, and Qur
   <p><strong>A note of caution:</strong> Do not take knowledge from some of these sites blindly — be wary of what they say, as several contain deviance, and you should NOT take Aqeedah from them. This applies especially to sites that host the opinions of “scholars,” where there is a lot of deviance mixed in. Some of the sites listed here are simply neutral resources (search tools, manuscript archives, dictionaries), for which this isn’t a concern. Everything above is linked because these are huge libraries containing a lot of good knowledge — use discernment, and verify what you read against reliable scholars.</p>
 </div>
 `,
+"what-is-islam/fiqh/introduction-to-fiqh": `
+<p class="lede">Fiqh (<span lang="ar">فقه</span>) literally means “deep understanding.” In Islamic tradition, it refers to Islamic jurisprudence: the practical rules and human understanding of Islamic law (Sharia) derived from sacred sources. Fiqh is the human attempt to apply those principles to daily life and real-world situations.</p>
+
+<h2>The Sources of Fiqh</h2>
+<p>Scholars derive legal rulings using 4 main sources:</p>
+<ol>
+  <li><strong>The Qur’an:</strong> The holy book and supreme source of guidance.</li>
+  <li><strong>The Sunnah:</strong> The practices, teachings, and sayings of Prophet Muhammad &#xFDFA;.</li>
+  <li><strong>Ijma’ (Consensus):</strong> The unanimous agreement of the salaf (the first 3 generations) and the khalaf (later scholars).</li>
+  <li><strong>Qiyas (Analogy):</strong> Applying an established rule to a new situation based on shared reasoning (e.g., applying the ban on wine to modern intoxicants).</li>
+</ol>
+`,
+
+"what-is-islam/fiqh/fatwas/tasweer": `
+<p class="lede">What is the ruling on making, viewing and keeping pictures, photos and drawings of living beings (humans and animals), including digital images on screens, according to the Maliki school?</p>
+
+<blockquote><strong>What does &ldquo;Maliki&rdquo; mean?</strong> &ldquo;Maliki&rdquo; means &ldquo;of Malik&rdquo;. It describes the school of Islamic law (madhhab) founded by Imam Malik ibn Anas of Medina (d. 179 AH), and a Maliki is a follower of that school.</blockquote>
+
+<h2>The short answer</h2>
+
+<p>The Maliki school (al-Madhhab al-Maliki), as explained by classical authorities such as Ibn Rushd, Ad-Dardir, An-Nafrawi and &lsquo;Ileesh, divides the ruling by three things: whether the image is <strong>three-dimensional or flat (two-dimensional)</strong>, whether it is <strong>complete or incomplete</strong>, and <strong>how it is used</strong>.</p>
+
+<h2>The three rulings</h2>
+
+<h3>1. Prohibited (Haram): complete 3D figures</h3>
+
+<p>It is strictly prohibited to construct a complete three-dimensional figure of a living creature with a soul (dhat ruh), meaning one that has a physical shadow and all the external limbs needed to live.</p>
+
+<blockquote>&ldquo;The one who makes that image will be punished on the Day of Resurrection, and it will be said to him: &lsquo;Give life to what you have created.&rsquo;&rdquo;</blockquote>
+
+<p>As stated by Imam Ad-Dardir in <em>Ash-Sharh al-Kabir</em>, this applies whether the material is permanent or temporary (for example sculpting with perishable items such as fruit peels). Viewing such statues is likewise forbidden.</p>
+
+<h3>2. Disliked (Makruh): flat images</h3>
+
+<p>Two-dimensional drawings, sketches or prints of humans or animals on flat surfaces (walls, paper, cloth, screens) that cast no physical shadow are <strong>disliked, not forbidden</strong>.</p>
+
+<p><strong>Digital screens:</strong> an image of a human or animal on a computer, phone or television screen is flat 2D imagery. Digital drawing and photography of living beings are therefore <em>makruh</em>, not <em>haram</em>.</p>
+
+<h3>3. Permissible (Mubah), or merely against what is better (Khilaf al-Awla)</h3>
+
+<p>The ruling moves from disliked to permissible, or merely contrary to what is better, in these cases:</p>
+
+<ul>
+  <li><strong>Incomplete figures:</strong> any image (2D or 3D) missing a vital limb or organ without which life could not exist, such as a missing head or upper torso.</li>
+  <li><strong>Degraded surfaces (Al-Mutahan):</strong> 2D images on everyday items that are stepped on, sat on or eaten from, such as floor rugs, mats, cushions or plates.</li>
+  <li><strong>Inanimate objects:</strong> images of things without a soul, such as trees, landscapes, clouds, mountains and buildings, are fully permissible by consensus.</li>
+</ul>
+
+<h2>The evidence for the Maliki position</h2>
+
+<p>The school relies on authentic reports that exempt flat, garment-based designs from the absolute prohibition.</p>
+
+<h3>The Hadith of the Curtain</h3>
+
+<p>Busr ibn Sa&lsquo;id narrated from Zayd ibn Khalid, from Abu Talhah, that the Prophet &#xFDFA; said: &ldquo;The angels do not enter a house in which there are figures.&rdquo; When Zayd later fell ill and had a curtain with images hanging on his door, &lsquo;Ubayd Allah al-Khawlani said: &ldquo;Did you not hear him when he said: &lsquo;Except if it is a design on a garment (cloth)&rsquo;?&rdquo; (Sahih Muslim)</p>
+
+<h3>The Hadith of the Sheet</h3>
+
+<p>Al-Tirmidhi reported that Abu Talhah wanted to remove a sheet from under him because of the images on it. Sahl ibn Hunayf reminded him: &ldquo;Did he not also say: &lsquo;Except if it is a design on a garment&rsquo;?&rdquo; Abu Talhah replied: &ldquo;Yes, but it makes me feel better.&rdquo; (Sahih)</p>
+
+<h2>Conclusion and practical counsel</h2>
+
+<ul>
+  <li><strong>Sculptures:</strong> making or acquiring complete 3D statues of living beings remains <em>haram</em>.</li>
+  <li><strong>Digital art and photography:</strong> drawing living beings or taking digital photos is <em>makruh</em> in the Maliki school, though not sinful.</li>
+  <li><strong>Recommendation:</strong> although flat digital drawings and photos may be used, it is better to limit unnecessary depiction of living creatures, or to use incomplete forms, so as to avoid even the dislike (makruh).</li>
+</ul>
+
+<h2>Two important notes</h2>
+
+<h3>1. Children&rsquo;s toys</h3>
+
+<p>Toys (dolls) for children are allowed, but only if a child actually uses them. A child here means someone who has not reached puberty. The evidence is the report of &lsquo;A&rsquo;ishah:</p>
+
+<blockquote>When the Prophet &#xFDFA; arrived after the expedition of Tabuk or Khaybar (the doubt is from the narrator), the wind raised one end of a curtain hanging in front of her store-room, revealing some dolls that belonged to her. He asked: &ldquo;What is this?&rdquo; She replied: &ldquo;My dolls.&rdquo; Among them he saw a horse with wings made of rags and asked: &ldquo;What is this that I see among them?&rdquo; She said: &ldquo;A horse.&rdquo; He asked: &ldquo;What is this that it has on?&rdquo; She said: &ldquo;Two wings.&rdquo; He asked, surprised: &ldquo;A horse with two wings?&rdquo; She replied: &ldquo;Have you not heard that Solomon had horses with wings?&rdquo; The Prophet &#xFDFA; then laughed so heartily that she could see his molar teeth. (Abu Dawud)</blockquote>
+
+<h3>2. Idols</h3>
+
+<p>If the image is an idol, the obligation to destroy it is even greater than for an ordinary sculpture. See the section on idols below.</p>
+
+<h2>The warnings against image-making</h2>
+
+<p>The following reports are the basis for the prohibition on making images of living beings.</p>
+
+<h3>Ibn &lsquo;Abbas and the image-maker</h3>
+
+<p>Sa&lsquo;id ibn Abi al-Hasan said: I was with Ibn &lsquo;Abbas when a man came and said: &ldquo;O Abu &lsquo;Abbas, I earn my living by what my hands make, and I make these images.&rdquo; Ibn &lsquo;Abbas said: I will only tell you what I heard the Messenger of Allah &#xFDFA; say. I heard him say: &ldquo;Whoever makes an image, Allah will punish him until he breathes life into it, and he will never be able to do that.&rdquo; The man became very upset and his face turned pale, so Ibn &lsquo;Abbas said: &ldquo;Woe to you! If you insist on making images, then make images of these trees and everything that does not have a soul.&rdquo; (Al-Bukhari 2112, Muslim 2110)</p>
+
+<h3>The most severely punished</h3>
+
+<p>&lsquo;Abdullah ibn Mas&lsquo;ud said: I heard the Messenger of Allah &#xFDFA; say: &ldquo;The people who will be the most severely punished before Allah on the Day of Resurrection will be the image makers.&rdquo; (Al-Bukhari 5606, Muslim 2109)</p>
+
+<h3>&ldquo;Give life to what you have created&rdquo;</h3>
+
+<p>&lsquo;Abdullah ibn &lsquo;Umar reported that the Messenger of Allah &#xFDFA; said: &ldquo;Those who make these images will be punished on the Day of Resurrection. It will be said to them: Give life to that which you have created!&rdquo; (Al-Bukhari 5607, Muslim 2108)</p>
+
+<h3>Competing with Allah&rsquo;s creation</h3>
+
+<p>Abu Hurayrah entered a house in Madinah and saw someone making images in it. He said: I heard the Messenger of Allah &#xFDFA; say that Allah says: &ldquo;Who does greater wrong than one who goes and creates something like My creation? Let them create a seed or a small ant!&rdquo; (Al-Bukhari 560, Muslim 2111)</p>
+
+<h2>Images in the home</h2>
+
+<p>The Prophet &#xFDFA; warned against bringing images into the house, saying that it is a sin and deprives a person of good.</p>
+
+<h3>Angels and statues</h3>
+
+<p>Abu Talhah said: I heard the Messenger of Allah &#xFDFA; say: &ldquo;The angels do not enter a house in which there is a dog or statues.&rdquo; (Al-Bukhari 3053, Muslim 2106)</p>
+
+<h3>The pillow with images</h3>
+
+<p>&lsquo;A&rsquo;ishah, Umm al-Mu&rsquo;minin, bought a pillow with images on it. When the Messenger of Allah &#xFDFA; saw it, he stood at the door and did not enter. She saw on his face that he was upset and said: &ldquo;O Messenger of Allah, I repent to Allah and His Messenger. What is my sin?&rdquo; He asked: &ldquo;What is this pillow?&rdquo; She said: &ldquo;I bought it for you so that you could sit and recline on it.&rdquo; The Messenger of Allah &#xFDFA; said: &ldquo;On the Day of Resurrection, the makers of these images will be punished and it will be said to them: Give life to that which you have created.&rdquo; And he said: &ldquo;The angels do not enter a house in which there are images.&rdquo; (Al-Bukhari 1999, Muslim 2107)</p>
+
+<h2>Images of the deceased and images on graves</h2>
+
+<p>The command is to destroy two kinds of images: those that represent a deceased person, and those placed on top of graves, because shirk may come about from both. (From <em>Majmu&lsquo; al-Fatawa</em>, 17/462 and <em>Al-Fawa&rsquo;id</em>, p. 196)</p>
+
+<h2>Idols and their destruction</h2>
+
+<p>An idol is worse than an ordinary image, because it is used for shirk.</p>
+
+<h3>The Prophet&rsquo;s mission</h3>
+
+<p>The Prophet &#xFDFA; entered Makkah when there were 360 idols around the Ka&lsquo;bah. He began striking them with a stick in his hand while reciting: &ldquo;Truth has come and falsehood has vanished.&rdquo; &lsquo;Amr ibn &lsquo;Abasah asked him: &ldquo;Who are you?&rdquo; He said: &ldquo;I am a Prophet.&rdquo; &lsquo;Amr asked: &ldquo;What is a Prophet?&rdquo; He said: &ldquo;I have been sent by Allah.&rdquo; &lsquo;Amr asked: &ldquo;With what have you been sent?&rdquo; He said: &ldquo;I have been sent to join ties of relationship, to break the idols, and to proclaim the oneness of Allah, so that nothing is associated with Him.&rdquo; (<a href="https://sunnah.com/muslim:832" target="_blank" rel="noopener">Sahih Muslim 832</a>)</p>
+
+<h3>The ruling</h3>
+
+<ul>
+  <li>It is not lawful for a Muslim to possess an idol (<a href="https://sunnah.com/bukhari:2236" target="_blank" rel="noopener">Bukhari 2236</a>), so any such idol has to be destroyed.</li>
+  <li>The Prophet &#xFDFA; also defaced images that were not idols (<a href="https://sunnah.com/tirmidhi:2806" target="_blank" rel="noopener">Tirmidhi 2806</a>), and an idol is worse than that.</li>
+  <li>Some scholars note that destroying such idols is a form of forbidding evil (nahy &lsquo;an al-munkar) and state that neither legal punishment nor financial compensation applies to someone who destroys them.</li>
+  <li>The Prophet &#xFDFA; commanded &lsquo;Ali ibn Abi Talib: <span dir="rtl" lang="ar">لا تدع تمثالا إلا طمسته</span> (&ldquo;Do not leave an image without obliterating it&rdquo;). (<a href="https://sunnah.com/muslim:969a" target="_blank" rel="noopener">Muslim</a>)</li>
+</ul>
+
+<h3>Prophets and Companions who destroyed idols</h3>
+
+<ul>
+  <li><strong>Musa (Moses)</strong> &#x639;&#x644;&#x64A;&#x647; &#x627;&#x644;&#x633;&#x644;&#x627;&#x645; destroyed the golden calf (<a href="https://quran.com/20/97?translations=20" target="_blank" rel="noopener">Qur&rsquo;an 20:97</a>).</li>
+  <li><strong>Ibrahim (Abraham)</strong> &#x639;&#x644;&#x64A;&#x647; &#x627;&#x644;&#x633;&#x644;&#x627;&#x645; destroyed the idols of his people (<a href="https://quran.com/21/57-58?translations=20" target="_blank" rel="noopener">Qur&rsquo;an 21:57-58</a>).</li>
+  <li><strong>The Prophet Muhammad</strong> &#xFDFA; destroyed the idols in the Ka&lsquo;bah at the conquest of Makkah (<a href="https://sunnah.com/bukhari:4720" target="_blank" rel="noopener">Bukhari 4720</a>).</li>
+  <li><strong>Khalid ibn al-Walid</strong> was sent by the Prophet &#xFDFA; to Nakhlah to demolish the idol of al-&lsquo;Uzza (<em>Ar-Raheeq al-Makhtum</em>).</li>
+  <li><strong>&lsquo;Amr ibn al-&lsquo;As</strong> was sent to demolish the idol of Suwa&lsquo; (<em>Ar-Raheeq al-Makhtum</em>).</li>
+  <li><strong>Sa&lsquo;d ibn Zayd al-Ashhali</strong> was sent to al-Mushallal to demolish the idol of Manat (<em>Ar-Raheeq al-Makhtum</em>).</li>
+  <li><strong>&lsquo;Ali ibn Abi Talib</strong> was sent to demolish Qullus, the idol of the Tayy&rsquo; tribe (<em>Ar-Raheeq al-Makhtum</em>).</li>
+  <li><strong>Al-Mughirah ibn Shu&lsquo;bah</strong> was sent to Ta&rsquo;if to demolish the idol of al-Lat (<em>Ar-Raheeq al-Makhtum</em>).</li>
+  <li><strong>Jarir ibn &lsquo;Abdullah</strong> was sent to demolish Dhul-Khalasah (<a href="https://sunnah.com/bukhari:4355" target="_blank" rel="noopener">Bukhari 4355</a>).</li>
+</ul>
+`,
+"what-is-islam/fiqh/usool-al-fiqh": `
+<p class="lede">Usool al-Fiqh (legal principles) is the framework for interpreting and understanding Islamic law. There are 4 main schools, each with its own usool, but I recommend the Maliki school. Why?</p>
+
+<blockquote><strong>What does &ldquo;Maliki&rdquo; mean?</strong> &ldquo;Maliki&rdquo; means &ldquo;of Malik&rdquo;. It describes the school of Islamic law (madhhab) founded by Imam Malik ibn Anas of Medina (d. 179 AH), and a Maliki is a follower of that school.</blockquote>
+
+<h2>Why the Maliki School?</h2>
+<p>Imam Malik is the scholar the school is based on. He was a member of the salaf, and in fact only he and Imam al-Shafi’i are members of the salaf. The leaders of the other 2 schools are either heavily rejected by the salaf and a kaafir (like the Hanafi school), or not a member of the salaf because they never learnt from the generation after the Companions (like Imam Ahmad).</p>
+
+<p>The Maliki school is the school of Ahl al-Madinah, the people of Medina, and its rulings are heavily based on Medinan practice. What did the Prophet &#xFDFA; say about this?</p>
+
+<h2>Abu Iyas al-Kinani’s Notebook</h2>
+<h3>Explaining His &#xFDFA; Statement: “Mecca Will Never Be Invaded After This Day”</h3>
+
+<blockquote>Al-Humaydi said: Sufyan narrated to us, saying: Zakariyya ibn Abi Za’idah narrated to us, from al-Sha’bi, from al-Harith ibn Malik ibn al-Barasa, who said: “I heard the Messenger of Allah &#xFDFA;, on the day of the conquest of Mecca, say: ‘Mecca will never be invaded after this day.’” Sufyan said: “Its interpretation is: [they will not be invaded] on account of disbelief.”<cite>The book called al-Musnad (582)</cite></blockquote>
+
+<blockquote>Al-Humaydi said: Sufyan narrated to us, saying: Zakariyya ibn Abi Za’idah narrated to us, from al-Sha’bi, who said: “Abdullah ibn Mutay’ informed me, from his father, Mutay’ ibn al-Aswad, who said: ‘I heard the Messenger of Allah &#xFDFA;, on the day of the conquest of Mecca, say: “No Qurashi will be killed by being tied up after this day.”’” Sufyan said: “Meaning: [he will not be killed] on account of disbelief.”<cite>The book called al-Musnad (578)</cite></blockquote>
+
+<blockquote>Sufyan ibn ‘Uyaynah al-Hilali said: “Its interpretation is that they will never disbelieve, nor will they be invaded on account of disbelief.”<cite>The book called Sharh Mushkil al-Athar (1509)</cite></blockquote>
+
+<p>I said: Rather, the Prophet &#xFDFA; intended the people of Mecca by saying that they would not be invaded on account of disbelief. This is an instance of referring to the whole by mentioning a part. The people of Mecca were Quraysh, and the evidence for this is the other hadith that clarifies it, in which he &#xFDFA; said: “No Qurashi will be killed by being tied up.” The Prophet &#xFDFA; did not say, “No Qurashi shall be killed” in the jussive form, but rather he said, “No Qurashi will be killed.” The meaning of this is that those among Quraysh who embraced Islam and became Companions outwardly could not possibly openly apostatize and thereby be killed for it, nor could they subsequently be invaded on account of it. That generation has now passed. Thus, this hadith is among the proofs of prophethood, and it is not as the Murjiah and the Mu’attilah interpreted it; rather, it is a report concerning the original Quraysh.</p>
+
+<blockquote>Abu ‘Ubayd al-Harawi said: “Regarding his &#xFDFA; statement: When he conquered Mecca, he &#xFDFA; said: ‘Quraysh will not be invaded after it.’ The interpretation of this according to us is that he is saying: ‘Quraysh will not disbelieve after this, such that they would then be invaded on account of disbelief.’ Similarly, there is the other hadith: ‘No Qurashi will be killed by being tied up.’ Its meaning, and Allah knows best, is not that he prohibited killing him if he deserved to be killed. Quraysh and others were equal before him with respect to the truth. Rather, its meaning is that it is a report that no Qurashi will apostatize and thus be killed by being tied up on account of disbelief.”<cite>The book called Gharib al-Hadith (3/191)</cite></blockquote>
+
+<blockquote>Ibn Qutaybah al-Dinawari said: “The Messenger of Allah &#xFDFA; said: ‘No Qurashi will be killed by being tied up after this day.’ According to those who narrated it in the jussive form, the apparent wording would require that a Qurashi not be killed if he apostatized, and that retaliation not be exacted from him if he killed someone. But whoever narrated it in the indicative form, the interpretation is directed toward a report concerning Quraysh: that no one among them will apostatize from Islam and thereby become deserving of execution.”<cite>The book called Ta’wil Mushkil al-Qur’an (p. 18)</cite></blockquote>
+
+<blockquote>Abu Zakariyya al-Basri said: “Regarding His statement, the Exalted: {And how many a town We have destroyed} — meaning, We annihilated — {that was wrongdoers} [al-Anbiya’: 11], meaning: polytheistic; meaning its inhabitants.”<cite>The book called Tafsir Yahya (1/301)</cite></blockquote>
+
+<blockquote>Abu Zakariyya al-Basri said: “Regarding His statement, the Exalted: {And how many a town I gave respite} until the time when I seized it, {while it was wronging} [al-Hajj: 48], meaning: polytheistic; meaning its inhabitants.”<cite>The book called Tafsir Yahya (1/383)</cite></blockquote>
+
+<blockquote>Abu Zakariyya al-Basri said: “Regarding His statement, the Exalted: {And We would never destroy the towns unless their inhabitants were wrongdoers} [al-Qasas: 59], meaning: polytheists. And its mother is Mecca, and it is the Mother of Cities… {And Allah presents the example of a town that was secure and at peace, its provision coming to it abundantly} — and abundance means that no one held it accountable for what Allah, Glorified is He, provided it with. He, the Exalted, said: {from every place, but it denied the favors of Allah} [al-Nahl: 112], meaning: its inhabitants disbelieved.”<cite>The book called Tafsir Yahya (2/603)</cite></blockquote>
+
+<blockquote>Ibn Sidah al-Mursi said: “On the basis of calling the part by the name of the whole, such as your saying ‘water’ for a part of the water, ‘air’ for a portion of the air, and ‘earth’ for a piece of the earth.”<cite>The book called Lisan al-‘Arab (4/410)</cite></blockquote>
+
+<blockquote>Abu Ya’qub al-Naysaburi said: “I asked him about the statement of the Prophet &#xFDFA; on the day of the conquest of Mecca: ‘Quraysh will not be invaded after it.’ He said: ‘Yes. On the day he invaded them, he &#xFDFA; said: “No Qurashi will be killed by being tied up.”’”<cite>The book called Masa’il Ahmad by Ibn Hani’ — edited by al-Shawish (2013)</cite></blockquote>
+
+<p>I said: With this, we teach the Hanbalis who excuse [people] about the religion of their Imam, Ibn Hanbal, and his madhhab, as we have accustomed you to, if Allah the Exalted wills. And Allah is the One who grants success and from whom aid is sought.</p>
+
+<blockquote>Ibn Abi Shaybah said: Waki’ narrated to us, from Sufyan, from Abu al-Za’ra’, from Abu al-Ahwas, who said: “Abdullah [meaning Ibn Mas’ud] — may Allah be pleased with him — said: ‘A man is not born knowledgeable; rather, knowledge is acquired through learning.’”<cite>The book called al-Musannaf — edited by al-Shathri (27804)</cite></blockquote>
+
+<blockquote>Abu al-Qasim said: I heard Muhammad ibn al-Husayn say: I heard Abu Bakr al-Razi say: I heard al-Khawwas say: “Knowledge is not [measured] by the abundance of narration. Rather, the scholar is the one who follows knowledge and puts it into practice, and follows the Sunnahs, even if his knowledge is little.”<cite>The book called al-Risalah al-Qushayriyyah (p. 183)</cite></blockquote>
+
+<hr class="rule">
+
+<h2>The Maliki Methodology</h2>
+<p>The Maliki school was formulated by Imam Malik ibn Anas (d. 179 AH) in Medina and later codified by Maliki scholars (like Qadi Abu Bakr al-Baqillani and al-Shatibi). It balances strict reliance on textual revelation with heavy consideration for public welfare (maslahah) and local custom (‘urf).</p>
+
+<p>While Imam Malik did not leave behind a single book dedicated purely to legal theory, his legal methodology was extracted directly from his premier Hadith and Fiqh text, Al-Muwatta, and his rulings in Al-Mudawwanah.</p>
+
+<h3>The Hierarchy of Sources in Maliki Usool al-Fiqh</h3>
+<ol>
+  <li><strong>The Qur’an</strong></li>
+  <li><strong>The Sunnah:</strong> The actions, statements, and approvals of Prophet Muhammad &#xFDFA;.
+    <ul>
+      <li><strong>Mutawatir (Mass-transmitted):</strong> Unquestionable authority.</li>
+      <li><strong>Ahad (Isolated/Solitary Hadiths):</strong> Accepted, but with a critical condition: if an isolated Hadith directly contradicts the established, widespread practice of the people of Medina, Imam Malik rejected the isolated report in favor of Medina’s practice.</li>
+    </ul>
+  </li>
+  <li><strong>Ijma’ (Consensus of Scholars and Salaf)</strong></li>
+  <li><strong>‘Amal Ahl al-Madinah (The Practice of the People of Medina):</strong> This is the most distinct principle of the Maliki school. Imam Malik argued that Medina was where the Qur’an was revealed and where thousands of Companions lived alongside the Prophet &#xFDFA;. Therefore, a continuous, living tradition practiced by hundreds of scholars and residents in early Medina carried more legal weight than a single isolated chain of narration (Ahad Hadith).</li>
+  <li>The legal opinions of major Companions (especially the Rightly Guided Caliphs and scholars like Abdullah ibn Umar) carry legal weight when they do not contradict clear texts or general principles. Generally, so do many sayings of the salaf, but they may not be binding.</li>
+  <li><strong>Qiyas (Analogical Reasoning):</strong> Applying the ruling of an established case to a new scenario due to a shared effective cause (‘Illah).</li>
+  <li><strong>Sadd al-Dhara’i’ (Blocking the Means):</strong> Prohibiting an otherwise permissible act if it almost certainly leads to a prohibited result. For example, selling weapons during a civil war is forbidden because it facilitates unlawful killing.</li>
+</ol>
+
+<hr class="rule">
+
+<h2>Do Not Make Taqlid</h2>
+<p>Thus, you should be a Maliki, but do not make taqlid (blind following) of Imam Malik!!!</p>
+
+<p>You should use his usool and how the early reliable scholars go about interpreting things, and look at the evidence they give from the above sources before taking an opinion.</p>
+
+<p>Because Imam Malik himself said:</p>
+<blockquote>“Indeed, I am but a human being. At times I am correct, at [other] times I err. So look into my sayings: whatever agrees with the Book and the Sunnah, accept it; whatever contradicts them, ignore it.”<cite>Imam Malik</cite></blockquote>
+
+<p>Not every taqlid is blatant kufr, fisq or shirk; rather, there are some details pertaining to this matter. None of the four leaders of the schools of fiqh called people to follow his madhhab (school of jurisprudence), or obliged anyone else to act in accordance with it or with a specific madhhab. They used to call people to follow the Qur’an and the Sunnah and to interpret Islamic texts.</p>
+
+<p>When I say become Maliki, I do not mean it in the way some of these morons do nowadays who say you need to make taqlid of scholars if you are not a scholar. No, you do not. What you do is go to the scholars for their evidence and their interpretations, but you do NOT just blindly take their opinion without understanding why, nor do you persist in their opinion if you see evidence against it!</p>
+`,
+
 "fiqh/different-acts-of-worship/hygiene": `
 <p class="lede">In Islam, cleanliness is both a practical habit and part of the fitrah: the natural practices that keep a person clean, presentable, and ready for worship.</p>
 
@@ -2802,6 +3120,58 @@ A brilliant channel focused on breaking down Arabic grammar, vocabulary, and Qur
 
 <p>This list is a work in progress — more links will be added over time.</p>
 `,
+"why-islam-is-true/empirical-evidence-for-islam": `
+<p class="lede">Historical, textual, and scientific evidence cited in support of Islam.</p>
+
+<h2>Synopsis</h2>
+<p>This section looks at the evidence offered for Islam’s claim to be a revealed religion, rather than asking you to accept it on assertion alone. The evidence falls into three broad areas: <strong>historical</strong> (how the Qur’an and the sayings of the Prophet &#xFDFA; were transmitted and preserved), <strong>textual</strong> (what the Qur’an says and how it stands up to examination), and <strong>scientific</strong> (statements in the sources that can be compared with what is known today).</p>
+
+<p>For the method behind the historical evidence, see <a href="#/forum/why-islam-is-true/verifying-isnaad-methodology">Verifying Isnaad Methodology</a>. For how to weigh evidence in general, see <a href="#/forum/why-islam-is-true/principles-to-understand/evidence-and-probability">Evidence and Probability</a>.</p>
+
+<h2>Read the Full Document</h2>
+<a class="cta-link" href="https://docs.google.com/document/d/1-XZWYGVoX4goc9faz4jzzEGCos9YzHYKz0K7N_nVEHE/edit?usp=sharing" target="_blank" rel="noopener">
+  Evidence for Islam (Google Doc)
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+</a>
+`,
+
+"why-islam-is-true/verifying-isnaad-methodology": `
+<p class="lede">The Isnaad methodology is a system of historical verification built on five universal standards of evidence: chain of custody, witness character auditing, cognitive testing, timeline verification, and statistical convergence.</p>
+
+<h2>1. The 5 Core Verification Criteria</h2>
+<p>To be accepted as authentic (Sahih), a historical report must meet five non-negotiable requirements:</p>
+<ul>
+  <li><strong>Unbroken Chain of Custody (Ittisal):</strong> The report must specify an uninterrupted line of named transmitters from the reporter back to the original eyewitness. If a single link is missing or anonymous, the report is rejected.</li>
+  <li><strong>Witness Integrity (‘Adalah):</strong> Every narrator in the chain is audited using biographical registries (‘Ilm al-Rijal). A single documented lie or dishonest act in daily life permanently disqualifies a narrator.</li>
+  <li><strong>Cognitive Accuracy (Dabt):</strong> Scholars tested narrators’ memories by comparing their statements against independent records kept by their peers. Frequent memory slips or errors downgraded a narrator’s credibility rating.</li>
+  <li><strong>Spatiotemporal Verification:</strong> Birth dates, death dates, travel logs, and locations are cross-checked. If physical contact between a teacher and student was chronologically or geographically impossible, the chain is rejected.</li>
+  <li><strong>Textual Criticism (Matn):</strong> The text itself is cross-examined against known historical facts, established legal principles, and stronger parallel reports. If the text contains errors or contradictions, the report is set aside even if the chain looks clean.</li>
+</ul>
+
+<h2>2. Why Fabricating a Chain Was Impossible</h2>
+<p>Any attempt to forge a fake chain triggered an immediate structural red flag within the system:</p>
+<ul>
+  <li><strong>Inventing fake names:</strong> Biographical registries tracked every recognized scholar and student in the region. Unrecorded names were flagged as unknown (Majhul), breaking the chain.</li>
+  <li><strong>Hijacking famous names:</strong> Prominent scholars had dozens of regular students documenting their lectures. Claiming a unique report from a famous scholar that none of their primary students recorded was flagged as anomalous (Shadh) and rejected.</li>
+  <li><strong>Mixing and matching real narrators:</strong> Linking real historical figures from different regions was exposed by travel records, birth/death timelines, and location gaps.</li>
+</ul>
+
+<h2>3. Mathematical Proof: Multi-Regional Convergence (Tawatur)</h2>
+<p>In the 7th and 8th centuries, major learning centers like Medina, Kufa, Basra, Damascus, and Cairo were separated by weeks of desert travel with no telecommunications or mass media.</p>
+<p>When a report was transmitted via Tawatur (mass transmission), it meant dozens of independent chains passed through distinct networks across these isolated regions:</p>
+<ul>
+  <li>The mathematical probability of independent groups in different countries accidentally fabricating the exact same detailed statement word-for-word approaches zero.</li>
+  <li>Coordinating a secret forgery across thousands of miles without detection was physically impossible.</li>
+  <li>Identical convergence across isolated geographic regions logically proves a single, real historical event occurred at the source.</li>
+</ul>
+
+<h2>4. Historical Testing and Modern Academic Validation</h2>
+<ul>
+  <li><strong>Blind Audits:</strong> Hadith critics routinely stress-tested narrators. In famous public tests (such as the Baghdad audit of Imam al-Bukhari), examiners deliberately scrambled chains and texts. Qualified critics caught every swapped link and restored the correct chains purely from memory.</li>
+  <li><strong>Modern Secular Analysis:</strong> Modern historical-critical research using Isnad-cum-Matn Analysis (ICMA) — pioneered by secular scholars like Harald Motzki — analyzes text variants alongside chain structures using statistical modeling. These studies confirm that Isnaad networks accurately reflect authentic historical transmission lines extending back to the 7th century CE.</li>
+</ul>
+`,
+
 "why-islam-is-true/argument-from-reduction": `
 <p class="lede">If a creator exists, atheism is no longer a complete explanation of reality. The argument from reduction compares the remaining broad options and asks which worldview best explains evidence, meaning, morality, and human life.</p>
 
